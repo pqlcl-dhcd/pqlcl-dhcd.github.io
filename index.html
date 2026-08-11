@@ -3,167 +3,761 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Phòng Quản lý chất lượng - Trường Đại học Công đoàn</title>
-  <meta name="description" content="Cổng thông tin Phòng Quản lý chất lượng - Trường Đại học Công đoàn">
+
+  <meta
+    name="description"
+    content="Cổng thông tin Phòng Quản lý chất lượng - Trường Đại học Công đoàn"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header class="site-header">
+
     <div class="topbar">
       <div class="container topbar-inner">
         <span>TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN</span>
         <span>PHÒNG QUẢN LÝ CHẤT LƯỢNG</span>
       </div>
     </div>
+
     <div class="container header-main">
+
       <div class="brand">
-        <div class="brand-title">PHÒNG QUẢN LÝ CHẤT LƯỢNG</div>
-        <div class="brand-subtitle">Cổng thông tin điện tử</div>
+        <div class="brand-title">
+          PHÒNG QUẢN LÝ CHẤT LƯỢNG
+        </div>
+
+        <div class="brand-subtitle">
+          Cổng thông tin điện tử
+        </div>
       </div>
-      <button class="menu-toggle" aria-label="Mở menu">☰</button>
+
+      <button
+        class="menu-toggle"
+        aria-label="Mở menu"
+      >
+        ☰
+      </button>
+
     </div>
+
+    <!-- MENU -->
+
     <nav class="nav">
+
       <div class="container nav-inner">
-        <a class="active" href="#home">Trang chủ</a>
-        <a href="#news">Tin tức - Thông báo</a>
-        <a href="van-ban.html">Văn bản</a>
-        <a href="#quality">Đảm bảo chất lượng</a>
-        <a href="#assessment">Tự đánh giá & Kiểm định</a>
-        <a href="#evidence">Minh chứng</a>
-        <a href="#public">Công khai</a>
-        <a href="#contact">Liên hệ</a>
+
+        <a class="active" href="#home">
+          Trang chủ
+        </a>
+
+        <a href="#news">
+          Tin tức - Thông báo
+        </a>
+
+        <!-- MỞ TRANG KHO VĂN BẢN -->
+        <a href="van-ban.html">
+          Văn bản
+        </a>
+
+        <a href="#quality">
+          Đảm bảo chất lượng
+        </a>
+
+        <a href="#assessment">
+          Tự đánh giá & Kiểm định
+        </a>
+
+        <a href="#evidence">
+          Minh chứng
+        </a>
+
+        <a href="#public">
+          Công khai
+        </a>
+
+        <a href="#contact">
+          Liên hệ
+        </a>
+
       </div>
+
     </nav>
+
   </header>
 
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
   <main id="home">
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero">
+
       <div class="container hero-content">
+
         <div>
-          <span class="eyebrow">CỔNG THÔNG TIN PHÒNG QUẢN LÝ CHẤT LƯỢNG</span>
-          <h1>Phòng quản lý chất lượng<br><strong>Trường Đại học Công đoàn</strong></h1>
-          <p>Hệ thống tra cứu thông tin, văn bản, hoạt động đảm bảo chất lượng, tự đánh giá, kiểm định và minh chứng.</p>
+
+          <span class="eyebrow">
+            CỔNG THÔNG TIN PHÒNG QUẢN LÝ CHẤT LƯỢNG
+          </span>
+
+          <h1>
+            Phòng quản lý chất lượng<br>
+            <strong>Trường Đại học Công đoàn</strong>
+          </h1>
+
+          <p>
+            Hệ thống tra cứu thông tin, văn bản, hoạt động đảm bảo chất lượng,
+            tự đánh giá, kiểm định và minh chứng.
+          </p>
+
           <div class="hero-actions">
-           <a class="btn primary" href="van-ban.html">Tra cứu văn bản</a>
-            <a class="btn secondary" href="#quality">Xem hoạt động QLCL</a>
+
+            <!-- MỞ TRANG KHO VĂN BẢN -->
+            <a
+              class="btn primary"
+              href="van-ban.html"
+            >
+              Tra cứu văn bản
+            </a>
+
+            <a
+              class="btn secondary"
+              href="#quality"
+            >
+              Xem hoạt động QLCL
+            </a>
+
           </div>
+
         </div>
+
+
+        <!-- TRA CỨU NHANH -->
+
         <div class="hero-card">
-          <div class="hero-card-label">TRA CỨU NHANH</div>
+
+          <div class="hero-card-label">
+            TRA CỨU NHANH
+          </div>
+
           <div class="search-box">
-            <input id="searchInput" type="search" placeholder="Tìm văn bản, thông báo, minh chứng...">
-            <button id="searchBtn">Tìm kiếm</button>
+
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Tìm văn bản, thông báo, minh chứng..."
+            >
+
+            <button id="searchBtn">
+              Tìm kiếm
+            </button>
+
           </div>
+
           <div class="quick-tags">
-            <button data-filter="văn bản">Văn bản</button>
-            <button data-filter="kiểm định">Kiểm định</button>
-            <button data-filter="minh chứng">Minh chứng</button>
-            <button data-filter="công khai">Công khai</button>
+
+            <button data-filter="văn bản">
+              Văn bản
+            </button>
+
+            <button data-filter="kiểm định">
+              Kiểm định
+            </button>
+
+            <button data-filter="minh chứng">
+              Minh chứng
+            </button>
+
+            <button data-filter="công khai">
+              Công khai
+            </button>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         THỐNG KÊ
+    ========================== -->
 
     <section class="section stats-section">
+
       <div class="container stats">
-        <div class="stat"><strong id="statDocs">0</strong><span>Văn bản</span></div>
-        <div class="stat"><strong id="statNews">0</strong><span>Thông báo</span></div>
-        <div class="stat"><strong id="statEvidence">0</strong><span>Minh chứng</span></div>
-        <div class="stat"><strong>24/7</strong><span>Tra cứu trực tuyến</span></div>
+
+        <div class="stat">
+          <strong id="statDocs">0</strong>
+          <span>Văn bản</span>
+        </div>
+
+        <div class="stat">
+          <strong id="statNews">0</strong>
+          <span>Thông báo</span>
+        </div>
+
+        <div class="stat">
+          <strong id="statEvidence">0</strong>
+          <span>Minh chứng</span>
+        </div>
+
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>Tra cứu trực tuyến</span>
+        </div>
+
       </div>
+
     </section>
 
-    <section class="section" id="news">
+
+    <!-- =========================
+         TIN TỨC
+    ========================== -->
+
+    <section
+      class="section"
+      id="news"
+    >
+
       <div class="container">
+
         <div class="section-heading">
-          <div><span class="eyebrow">CẬP NHẬT</span><h2>Tin tức - Thông báo</h2></div>
-          <a href="#" class="view-all">Xem tất cả →</a>
+
+          <div>
+
+            <span class="eyebrow">
+              CẬP NHẬT
+            </span>
+
+            <h2>
+              Tin tức - Thông báo
+            </h2>
+
+          </div>
+
+          <a
+            href="#"
+            class="view-all"
+          >
+            Xem tất cả →
+          </a>
+
         </div>
-        <div class="cards" id="newsList"></div>
+
+        <div
+          class="cards"
+          id="newsList"
+        ></div>
+
       </div>
+
     </section>
 
-    <section class="section alt" id="documents">
+
+    <!-- =========================
+         VĂN BẢN
+         GIỮ LẠI SECTION ĐỂ SCRIPT.JS
+         KHÔNG BỊ LỖI
+    ========================== -->
+
+    <section
+      class="section alt"
+      id="documents"
+    >
+
       <div class="container">
+
         <div class="section-heading">
-          <div><span class="eyebrow">TRA CỨU</span><h2>Văn bản & Quy định</h2></div>
-          <a href="#" class="view-all">Kho văn bản →</a>
+
+          <div>
+
+            <span class="eyebrow">
+              TRA CỨU
+            </span>
+
+            <h2>
+              Văn bản & Quy định
+            </h2>
+
+          </div>
+
+          <!-- MỞ TRANG KHO VĂN BẢN -->
+          <a
+            href="van-ban.html"
+            class="view-all"
+          >
+            Kho văn bản →
+          </a>
+
         </div>
+
+
         <div class="table-wrap">
+
           <table>
-            <thead><tr><th>Số / Ký hiệu</th><th>Ngày</th><th>Tên văn bản</th><th>Loại</th><th></th></tr></thead>
-            <tbody id="documentsList"></tbody>
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Số / Ký hiệu
+                </th>
+
+                <th>
+                  Ngày
+                </th>
+
+                <th>
+                  Tên văn bản
+                </th>
+
+                <th>
+                  Loại
+                </th>
+
+                <th></th>
+
+              </tr>
+
+            </thead>
+
+            <tbody
+              id="documentsList"
+            ></tbody>
+
           </table>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section" id="quality">
+
+    <!-- =========================
+         ĐẢM BẢO CHẤT LƯỢNG
+    ========================== -->
+
+    <section
+      class="section"
+      id="quality"
+    >
+
       <div class="container">
+
         <div class="section-heading">
-          <div><span class="eyebrow">HỆ THỐNG QLCL</span><h2>Đảm bảo chất lượng</h2></div>
+
+          <div>
+
+            <span class="eyebrow">
+              HỆ THỐNG QLCL
+            </span>
+
+            <h2>
+              Đảm bảo chất lượng
+            </h2>
+
+          </div>
+
         </div>
+
+
         <div class="feature-grid">
-          <a class="feature" href="#"><span>01</span><h3>Hệ thống ĐBCL</h3><p>Cơ cấu, chính sách và quy trình đảm bảo chất lượng.</p></a>
-          <a class="feature" href="#"><span>02</span><h3>Khảo sát người học</h3><p>Khảo sát, phân tích phản hồi và cải tiến chất lượng.</p></a>
-          <a class="feature" href="#"><span>03</span><h3>Đánh giá chương trình</h3><p>Thông tin đánh giá, rà soát và cải tiến CTĐT.</p></a>
-          <a class="feature" href="#"><span>04</span><h3>Chỉ số chất lượng</h3><p>Dữ liệu và báo cáo phục vụ quản trị chất lượng.</p></a>
+
+          <a
+            class="feature"
+            href="#"
+          >
+
+            <span>01</span>
+
+            <h3>
+              Hệ thống ĐBCL
+            </h3>
+
+            <p>
+              Cơ cấu, chính sách và quy trình đảm bảo chất lượng.
+            </p>
+
+          </a>
+
+
+          <a
+            class="feature"
+            href="#"
+          >
+
+            <span>02</span>
+
+            <h3>
+              Khảo sát người học
+            </h3>
+
+            <p>
+              Khảo sát, phân tích phản hồi và cải tiến chất lượng.
+            </p>
+
+          </a>
+
+
+          <a
+            class="feature"
+            href="#"
+          >
+
+            <span>03</span>
+
+            <h3>
+              Đánh giá chương trình
+            </h3>
+
+            <p>
+              Thông tin đánh giá, rà soát và cải tiến CTĐT.
+            </p>
+
+          </a>
+
+
+          <a
+            class="feature"
+            href="#"
+          >
+
+            <span>04</span>
+
+            <h3>
+              Chỉ số chất lượng
+            </h3>
+
+            <p>
+              Dữ liệu và báo cáo phục vụ quản trị chất lượng.
+            </p>
+
+          </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section alt" id="assessment">
+
+    <!-- =========================
+         TỰ ĐÁNH GIÁ & KIỂM ĐỊNH
+    ========================== -->
+
+    <section
+      class="section alt"
+      id="assessment"
+    >
+
       <div class="container">
-        <div class="section-heading"><div><span class="eyebrow">KIỂM ĐỊNH</span><h2>Tự đánh giá & Kiểm định chất lượng</h2></div></div>
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              KIỂM ĐỊNH
+            </span>
+
+            <h2>
+              Tự đánh giá & Kiểm định chất lượng
+            </h2>
+
+          </div>
+
+        </div>
+
+
         <div class="timeline">
-          <div><b>01</b><h3>Tự đánh giá</h3><p>Thu thập dữ liệu, phân tích thực trạng và xác định điểm mạnh, điểm cần cải tiến.</p></div>
-          <div><b>02</b><h3>Minh chứng</h3><p>Quản lý, chuẩn hóa và tra cứu hệ thống minh chứng theo tiêu chuẩn.</p></div>
-          <div><b>03</b><h3>Đánh giá ngoài</h3><p>Chuẩn bị hồ sơ, phối hợp đánh giá ngoài và tiếp nhận khuyến nghị.</p></div>
-          <div><b>04</b><h3>Cải tiến chất lượng</h3><p>Theo dõi kế hoạch cải tiến và mức độ hoàn thành sau đánh giá.</p></div>
+
+          <div>
+
+            <b>01</b>
+
+            <h3>
+              Tự đánh giá
+            </h3>
+
+            <p>
+              Thu thập dữ liệu, phân tích thực trạng và xác định
+              điểm mạnh, điểm cần cải tiến.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <b>02</b>
+
+            <h3>
+              Minh chứng
+            </h3>
+
+            <p>
+              Quản lý, chuẩn hóa và tra cứu hệ thống minh chứng
+              theo tiêu chuẩn.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <b>03</b>
+
+            <h3>
+              Đánh giá ngoài
+            </h3>
+
+            <p>
+              Chuẩn bị hồ sơ, phối hợp đánh giá ngoài và tiếp nhận
+              khuyến nghị.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <b>04</b>
+
+            <h3>
+              Cải tiến chất lượng
+            </h3>
+
+            <p>
+              Theo dõi kế hoạch cải tiến và mức độ hoàn thành
+              sau đánh giá.
+            </p>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section" id="evidence">
+
+    <!-- =========================
+         MINH CHỨNG
+    ========================== -->
+
+    <section
+      class="section"
+      id="evidence"
+    >
+
       <div class="container evidence-box">
+
         <div>
-          <span class="eyebrow">KHO DỮ LIỆU</span>
-          <h2>Minh chứng</h2>
-          <p>Kho minh chứng có thể kết nối với dữ liệu JSON hoặc Google Sheet để cập nhật tập trung.</p>
+
+          <span class="eyebrow">
+            KHO DỮ LIỆU
+          </span>
+
+          <h2>
+            Minh chứng
+          </h2>
+
+          <p>
+            Kho minh chứng có thể kết nối với dữ liệu JSON hoặc
+            Google Sheet để cập nhật tập trung.
+          </p>
+
         </div>
-        <a class="btn primary" href="#">Tra cứu minh chứng</a>
+
+        <a
+          class="btn primary"
+          href="#"
+        >
+          Tra cứu minh chứng
+        </a>
+
       </div>
+
     </section>
 
-    <section class="section alt" id="public">
+
+    <!-- =========================
+         CÔNG KHAI
+    ========================== -->
+
+    <section
+      class="section alt"
+      id="public"
+    >
+
       <div class="container">
-        <div class="section-heading"><div><span class="eyebrow">MINH BẠCH THÔNG TIN</span><h2>Công khai</h2></div></div>
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              MINH BẠCH THÔNG TIN
+            </span>
+
+            <h2>
+              Công khai
+            </h2>
+
+          </div>
+
+        </div>
+
+
         <div class="public-grid">
-          <a href="#">Công khai hoạt động đào tạo</a>
-          <a href="#">Công khai đội ngũ</a>
-          <a href="#">Công khai cơ sở vật chất</a>
-          <a href="#">Công khai tài chính</a>
-          <a href="#">Công khai chất lượng giáo dục</a>
-          <a href="#">Các báo cáo liên quan</a>
+
+          <a href="#">
+            Công khai hoạt động đào tạo
+          </a>
+
+          <a href="#">
+            Công khai đội ngũ
+          </a>
+
+          <a href="#">
+            Công khai cơ sở vật chất
+          </a>
+
+          <a href="#">
+            Công khai tài chính
+          </a>
+
+          <a href="#">
+            Công khai chất lượng giáo dục
+          </a>
+
+          <a href="#">
+            Các báo cáo liên quan
+          </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section search-results-section" id="results">
+
+    <!-- =========================
+         KẾT QUẢ TÌM KIẾM
+    ========================== -->
+
+    <section
+      class="section search-results-section"
+      id="results"
+    >
+
       <div class="container">
-        <div class="section-heading"><div><span class="eyebrow">KẾT QUẢ</span><h2>Tìm kiếm</h2></div></div>
-        <div id="resultsList" class="results-list"></div>
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              KẾT QUẢ
+            </span>
+
+            <h2>
+              Tìm kiếm
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div
+          id="resultsList"
+          class="results-list"
+        ></div>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer id="contact">
+
     <div class="container footer-grid">
-      <div><h3>PHÒNG QUẢN LÝ CHẤT LƯỢNG</h3><p>Trường Đại học Công đoàn</p></div>
-      <div><p>Địa chỉ: 169 Tây Sơn, Đống Đa, Hà Nội</p><p>Email: qlcl@dhcd.edu.vn</p></div>
-      <div><p>Website được xây dựng trên GitHub Pages.</p><p>© 2026 Phòng Quản lý chất lượng</p></div>
+
+      <div>
+
+        <h3>
+          PHÒNG QUẢN LÝ CHẤT LƯỢNG
+        </h3>
+
+        <p>
+          Trường Đại học Công đoàn
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <p>
+          Địa chỉ: 169 Tây Sơn, Đống Đa, Hà Nội
+        </p>
+
+        <p>
+          Email: qlcl@dhcd.edu.vn
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <p>
+          Website được xây dựng trên GitHub Pages.
+        </p>
+
+        <p>
+          © 2026 Phòng Quản lý chất lượng
+        </p>
+
+      </div>
+
     </div>
+
   </footer>
+
+
+  <!-- JAVASCRIPT -->
+
   <script src="script.js"></script>
+
 </body>
 </html>
