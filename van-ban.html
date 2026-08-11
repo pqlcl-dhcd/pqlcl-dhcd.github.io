@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho văn bản - Phòng Quản lý chất lượng</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .document-page {
+            padding: 60px 0 80px;
+            background: #f8fafc;
+            min-height: 70vh;
+        }
+
+        .document-header {
+            margin-bottom: 35px;
+        }
+
+        .document-header h1 {
+            margin: 8px 0 10px;
+            color: #123b68;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .document-header p {
+            color: #667085;
+            font-size: 15px;
+        }
+
+        .document-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .document-category {
+            display: block;
+            padding: 25px;
+            background: #fff;
+            border: 1px solid #e4e7ec;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .document-category:hover {
+            transform: translateY(-3px);
+            border-color: #b9d2e8;
+            box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
+        }
+
+        .document-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .document-category h2 {
+            margin: 0 0 8px;
+            color: #123b68;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .document-category p {
+            margin: 0;
+            color: #667085;
+            font-size: 14px;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #1261a0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 850px) {
+            .document-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .document-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN</span>
+            <span>PHÒNG QUẢN LÝ CHẤT LƯỢNG</span>
+        </div>
+    </div>
+
+    <div class="container header-main">
+        <div class="brand">
+            <div class="brand-title">PHÒNG QUẢN LÝ CHẤT LƯỢNG</div>
+            <div class="brand-subtitle">Cổng thông tin điện tử</div>
+        </div>
+
+        <a href="index.html" class="back-home">← Trang chủ</a>
+    </div>
+
+</header>
+
+<main>
+
+    <section class="document-page">
+
+        <div class="container">
+
+            <div class="document-header">
+                <span class="eyebrow">HỆ THỐNG VĂN BẢN</span>
+
+                <h1>Kho văn bản</h1>
+
+                <p>
+                    Tra cứu, quản lý và khai thác các văn bản liên quan đến
+                    công tác quản lý và đảm bảo chất lượng.
+                </p>
+            </div>
+
+            <div class="document-grid">
+
+                <a href="#" class="document-category">
+                    <div class="document-icon">📁</div>
+                    <h2>Văn bản pháp luật</h2>
+                    <p>Luật, nghị định, thông tư và các văn bản quy phạm pháp luật.</p>
+                </a>
+
+                <a href="#" class="document-category">
+                    <div class="document-icon">📁</div>
+                    <h2>Quyết định</h2>
+                    <p>Các quyết định liên quan đến công tác quản lý chất lượng.</p>
+                </a>
+
+                <a href="#" class="document-category">
+                    <div class="document-icon">📁</div>
+                    <h2>Quy định</h2>
+                    <p>Các quy định, quy chế và văn bản quản lý nội bộ.</p>
+                </a>
+
+                <a href="#" class="document-category">
+                    <div class="document-icon">📁</div>
+                    <h2>Hướng dẫn</h2>
+                    <p>Các hướng dẫn thực hiện công tác đảm bảo và cải tiến chất lượng.</p>
+                </a>
+
+                <a href="#" class="document-category">
+                    <div class="document-icon">📁</div>
+                    <h2>Thông báo</h2>
+                    <p>Các thông báo của Nhà trường và Phòng Quản lý chất lượng.</p>
+                </a>
+
+                <a href="#" class="document-category">
+                    <div class="document-icon">📁</div>
+                    <h2>Báo cáo</h2>
+                    <p>Các báo cáo về hoạt động quản lý, đảm bảo và kiểm định chất lượng.</p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-grid">
+
+        <div>
+            <h3>PHÒNG QUẢN LÝ CHẤT LƯỢNG</h3>
+            <p>Trường Đại học Công đoàn</p>
+        </div>
+
+        <div>
+            <p>Địa chỉ: 169 Tây Sơn, Đống Đa, Hà Nội</p>
+            <p>Email: qlcl@dhcd.edu.vn</p>
+        </div>
+
+        <div>
+            <p>Cổng thông tin Phòng Quản lý chất lượng</p>
+            <p>© 2026 Phòng Quản lý chất lượng</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
