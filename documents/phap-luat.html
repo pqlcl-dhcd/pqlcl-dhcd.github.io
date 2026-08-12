@@ -1,1 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Văn bản pháp luật - Phòng Quản lý chất lượng</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .document-page {
+      padding: 60px 0 80px;
+      background: #f8fafc;
+      min-height: 70vh;
+    }
+
+    .document-header {
+      margin-bottom: 30px;
+    }
+
+    .document-header h1 {
+      color: #123b68;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+
+    .document-header p {
+      color: #667085;
+      font-size: 15px;
+    }
+
+    .document-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .document-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #e4e7ec;
+      border-radius: 10px;
+    }
+
+    .document-name {
+      color: #123b68;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .document-info {
+      color: #667085;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .document-link {
+      background: #1261a0;
+      color: #fff;
+      padding: 9px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .document-link:hover {
+      opacity: 0.9;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #1261a0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .loading {
+      padding: 30px;
+      text-align: center;
+      color: #667085;
+      background: #fff;
+      border: 1px solid #e4e7ec;
+      border-radius: 10px;
+    }
+
+    .empty {
+      padding: 30px;
+      text-align: center;
+      color: #667085;
+      background: #fff;
+      border: 1px solid #e4e7ec;
+      border-radius: 10px;
+    }
+
+    .error {
+      padding: 20px;
+      color: #b42318;
+      background: #fef3f2;
+      border: 1px solid #fecdca;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+
+      .document-header h1 {
+        font-size: 30px;
+      }
+
+      .document-item {
+        display: block;
+      }
+
+      .document-link {
+        display: inline-block;
+        margin-top: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN</span>
+      <span>PHÒNG QUẢN LÝ CHẤT LƯỢNG</span>
+    </div>
+  </div>
+
+  <div class="container header-main">
+
+    <div class="brand">
+      <div class="brand-title">
+        PHÒNG QUẢN LÝ CHẤT LƯỢNG
+      </div>
+
+      <div class="brand-subtitle">
+        Cổng thông tin điện tử
+      </div>
+    </div>
+
+    <a href="van-ban.html" class="back-link">
+      ← Kho văn bản
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <section class="document-page">
+
+    <div class="container">
+
+      <a href="van-ban.html" class="back-link">
+        ← Quay lại Kho văn bản
+      </a>
+
+      <div class="document-header">
+
+        <span class="eyebrow">
+          HỆ THỐNG VĂN BẢN
+        </span>
+
+        <h1>
+          Văn bản pháp luật
+        </h1>
+
+        <p>
+          Các văn bản pháp luật phục vụ công tác quản lý và đảm bảo chất lượng.
+        </p>
+
+      </div>
+
+
+      <div id="documentList" class="document-list">
+
+        <div class="loading">
+          Đang tải danh sách văn bản...
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div>
+      <h3>
+        PHÒNG QUẢN LÝ CHẤT LƯỢNG
+      </h3>
+
+      <p>
+        Trường Đại học Công đoàn
+      </p>
+    </div>
+
+    <div>
+
+      <p>
+        Địa chỉ: 169 Tây Sơn, Đống Đa, Hà Nội
+      </p>
+
+      <p>
+        Email: qlcl@dhcd.edu.vn
+      </p>
+
+    </div>
+
+    <div>
+
+      <p>
+        © 2026 Phòng Quản lý chất lượng
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const owner = "pqlcl-dhcd";
+const repo = "pqlcl-dhcd.github.io";
+const folder = "documents/phap-luat";
+
+const list = document.getElementById("documentList");
+
+async function loadDocuments() {
+
+  try {
+
+    const apiUrl =
+      `https://api.github.com/repos/${owner}/${repo}/contents/${folder}`;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error("Không thể đọc thư mục văn bản.");
+    }
+
+    const files = await response.json();
+
+    const pdfFiles = files.filter(
+      file =>
+        file.type === "file" &&
+        file.name.toLowerCase().endsWith(".pdf")
+    );
+
+    if (pdfFiles.length === 0) {
+
+      list.innerHTML = `
+        <div class="empty">
+          Chưa có văn bản pháp luật nào.
+        </div>
+      `;
+
+      return;
+    }
+
+    pdfFiles.sort((a, b) =>
+      a.name.localeCompare(b.name, "vi")
+    );
+
+    list.innerHTML = pdfFiles.map(file => {
+
+      const displayName =
+        file.name
+          .replace(/\.pdf$/i, "")
+          .replace(/[-_]+/g, " ");
+
+      const fileUrl =
+        `documents/phap-luat/${encodeURIComponent(file.name)}`;
+
+      return `
+        <div class="document-item">
+
+          <div>
+
+            <div class="document-name">
+              📄 ${displayName}
+            </div>
+
+            <div class="document-info">
+              Văn bản pháp luật · PDF
+            </div>
+
+          </div>
+
+          <a
+            class="document-link"
+            href="${fileUrl}"
+            target="_blank"
+            rel="noopener"
+          >
+            Xem PDF
+          </a>
+
+        </div>
+      `;
+
+    }).join("");
+
+  } catch (error) {
+
+    list.innerHTML = `
+      <div class="error">
+        Không thể tải danh sách văn bản.
+        Vui lòng thử lại sau.
+      </div>
+    `;
+
+    console.error(error);
+
+  }
+
+}
+
+loadDocuments();
+
+</script>
+
+</body>
+</html>
