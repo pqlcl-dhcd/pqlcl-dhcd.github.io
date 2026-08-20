@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Văn bản pháp luật - Phòng Quản lý chất lượng</title>
+  <title>Quyết định - Phòng Quản lý chất lượng</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -87,30 +87,25 @@
       text-decoration: underline;
     }
 
-    .loading {
+    .loading,
+    .empty,
+    .error {
       padding: 30px;
       text-align: center;
-      color: #667085;
       background: #fff;
       border: 1px solid #e4e7ec;
       border-radius: 10px;
     }
 
+    .loading,
     .empty {
-      padding: 30px;
-      text-align: center;
       color: #667085;
-      background: #fff;
-      border: 1px solid #e4e7ec;
-      border-radius: 10px;
     }
 
     .error {
-      padding: 20px;
       color: #b42318;
       background: #fef3f2;
-      border: 1px solid #fecdca;
-      border-radius: 10px;
+      border-color: #fecdca;
     }
 
     @media (max-width: 600px) {
@@ -127,6 +122,7 @@
         display: inline-block;
         margin-top: 12px;
       }
+
     }
   </style>
 </head>
@@ -145,6 +141,7 @@
   <div class="container header-main">
 
     <div class="brand">
+
       <div class="brand-title">
         PHÒNG QUẢN LÝ CHẤT LƯỢNG
       </div>
@@ -152,6 +149,7 @@
       <div class="brand-subtitle">
         Cổng thông tin điện tử
       </div>
+
     </div>
 
     <a href="van-ban.html" class="back-link">
@@ -173,6 +171,7 @@
         ← Quay lại Kho văn bản
       </a>
 
+
       <div class="document-header">
 
         <span class="eyebrow">
@@ -180,11 +179,11 @@
         </span>
 
         <h1>
-          Văn bản pháp luật
+          Quyết định
         </h1>
 
         <p>
-          Các văn bản pháp luật phục vụ công tác quản lý và đảm bảo chất lượng.
+          Các quyết định liên quan đến công tác quản lý và đảm bảo chất lượng.
         </p>
 
       </div>
@@ -193,7 +192,7 @@
       <div id="documentList" class="document-list">
 
         <div class="loading">
-          Đang tải danh sách văn bản...
+          Đang tải danh sách quyết định...
         </div>
 
       </div>
@@ -210,6 +209,7 @@
   <div class="container footer-grid">
 
     <div>
+
       <h3>
         PHÒNG QUẢN LÝ CHẤT LƯỢNG
       </h3>
@@ -217,7 +217,9 @@
       <p>
         Trường Đại học Công đoàn
       </p>
+
     </div>
+
 
     <div>
 
@@ -231,7 +233,12 @@
 
     </div>
 
+
     <div>
+
+      <p>
+        Cổng thông tin Phòng Quản lý chất lượng
+      </p>
 
       <p>
         © 2026 Phòng Quản lý chất lượng
@@ -248,9 +255,10 @@
 
 const owner = "pqlcl-dhcd";
 const repo = "pqlcl-dhcd.github.io";
-const folder = "documents/phap-luat";
+const folder = "documents/quyet-dinh";
 
 const list = document.getElementById("documentList");
+
 
 async function loadDocuments() {
 
@@ -262,31 +270,34 @@ async function loadDocuments() {
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-      throw new Error("Không thể đọc thư mục văn bản.");
+      throw new Error("Không thể đọc thư mục quyết định.");
     }
 
     const files = await response.json();
 
-    const pdfFiles = files.filter(
-      file =>
-        file.type === "file" &&
-        file.name.toLowerCase().endsWith(".pdf")
+
+    const pdfFiles = files.filter(file =>
+      file.type === "file" &&
+      file.name.toLowerCase().endsWith(".pdf")
     );
+
 
     if (pdfFiles.length === 0) {
 
       list.innerHTML = `
         <div class="empty">
-          Chưa có văn bản pháp luật nào.
+          Chưa có quyết định nào.
         </div>
       `;
 
       return;
     }
 
+
     pdfFiles.sort((a, b) =>
       a.name.localeCompare(b.name, "vi")
     );
+
 
     list.innerHTML = pdfFiles.map(file => {
 
@@ -295,10 +306,13 @@ async function loadDocuments() {
           .replace(/\.pdf$/i, "")
           .replace(/[-_]+/g, " ");
 
+
       const fileUrl =
-        `documents/phap-luat/${encodeURIComponent(file.name)}`;
+        `documents/quyet-dinh/${encodeURIComponent(file.name)}`;
+
 
       return `
+
         <div class="document-item">
 
           <div>
@@ -308,10 +322,11 @@ async function loadDocuments() {
             </div>
 
             <div class="document-info">
-              Văn bản pháp luật · PDF
+              Quyết định · PDF
             </div>
 
           </div>
+
 
           <a
             class="document-link"
@@ -323,15 +338,17 @@ async function loadDocuments() {
           </a>
 
         </div>
+
       `;
 
     }).join("");
+
 
   } catch (error) {
 
     list.innerHTML = `
       <div class="error">
-        Không thể tải danh sách văn bản.
+        Không thể tải danh sách quyết định.
         Vui lòng thử lại sau.
       </div>
     `;
@@ -341,6 +358,7 @@ async function loadDocuments() {
   }
 
 }
+
 
 loadDocuments();
 
