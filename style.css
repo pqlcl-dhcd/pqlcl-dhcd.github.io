@@ -796,3 +796,27 @@ footer {
         padding: 12px;
         border-radius: 7px;
     }
+/* Đổi nền HERO sang trắng */
+.hero {
+    background: #ffffff !important;
+}
+
+/* Bỏ lớp nền/hiệu ứng xanh nếu có */
+.hero::before,
+.hero::after {
+    background: none !important;
+    opacity: 0 !important;
+}
+
+/* Chữ màu xanh đậm để dễ đọc */
+.hero h1,
+.hero p,
+.hero span {
+    color: #123b6d !important;
+}
+
+/* Dòng chữ nhỏ phía trên */
+.hero .eyebrow {
+    color: #1d6fb8 !important;
+}
+    
