@@ -1,3 +1,8 @@
+/* =========================================================
+   PHÒNG QUẢN LÝ CHẤT LƯỢNG - TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN
+   STYLE.CSS - BẢN GIAO DIỆN NỀN TRẮNG
+   ========================================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -16,10 +21,6 @@ body {
     font-weight: 400;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     width: min(1180px, 92%);
     margin: auto;
@@ -27,13 +28,13 @@ body {
 
 /* =========================
    TOP BAR
-========================= */
+   ========================= */
 
 .topbar {
     background: #123b68;
     color: #fff;
     font-size: 13px;
-    letter-spacing: 0.3px;
+    letter-spacing: .3px;
 }
 
 .topbar-inner {
@@ -48,14 +49,16 @@ body {
 
 /* =========================
    HEADER
-========================= */
+   ========================= */
 
 .header-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    background: #fff;
 }
+
 .brand {
     display: flex;
     align-items: center;
@@ -66,17 +69,19 @@ body {
     width: 72px;
     height: 72px;
     object-fit: contain;
+    display: block;
 }
 
 .brand-text {
     display: flex;
     flex-direction: column;
 }
+
 .brand-title {
     font-weight: 700;
     font-size: 24px;
     color: #123b68;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px;
 }
 
 .brand-subtitle {
@@ -88,7 +93,7 @@ body {
 
 /* =========================
    MENU
-========================= */
+   ========================= */
 
 .nav {
     background: #fff;
@@ -101,7 +106,7 @@ body {
 
 .nav-inner {
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .nav a {
@@ -121,34 +126,29 @@ body {
 }
 
 /* =========================
-   HERO
-========================= */
+   HERO - NỀN TRẮNG
+   ========================= */
 
 .hero {
     position: relative;
     min-height: 500px;
     overflow: hidden;
     border-bottom: 1px solid #e6eef7;
-    background: #123b68;
+    background: #fff !important;
 }
 
+/* TẮT HOÀN TOÀN ẢNH NỀN CŨ */
 .hero-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    z-index: 0;
+    display: none !important;
 }
 
+/* TẮT HOÀN TOÀN LỚP PHỦ XANH CŨ */
+.hero::before,
 .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(18, 59, 104, 0.45);
-    z-index: 1;
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    opacity: 0 !important;
 }
 
 .hero-content {
@@ -156,19 +156,12 @@ body {
     z-index: 2;
     min-height: 500px;
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.15fr .85fr;
     gap: 60px;
     align-items: center;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 60px;
-    align-items: center;
-}
-
-/* Các tiêu đề VIẾT HOA nhỏ */
+/* Chữ Hero */
 .eyebrow {
     font-family: Arial, sans-serif;
     font-size: 12px;
@@ -183,7 +176,7 @@ body {
     font-size: 46px;
     line-height: 1.2;
     margin: 12px 0 18px;
-    color: #123b68;
+    color: #123b68 !important;
     font-weight: 700;
 }
 
@@ -193,14 +186,18 @@ body {
 
 .hero p {
     font-size: 17px;
-    color: #475467;
+    color: #475467 !important;
     max-width: 700px;
     font-weight: 400;
 }
 
+.hero span {
+    color: inherit;
+}
+
 /* =========================
    BUTTON
-========================= */
+   ========================= */
 
 .hero-actions {
     display: flex;
@@ -216,6 +213,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     font-family: Arial, sans-serif;
+    cursor: pointer;
 }
 
 .btn.primary {
@@ -231,13 +229,13 @@ body {
 
 /* =========================
    SEARCH CARD
-========================= */
+   ========================= */
 
 .hero-card {
     background: #fff;
     padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 15px 45px rgba(18, 59, 104, 0.12);
+    box-shadow: 0 15px 45px rgba(18, 59, 104, .12);
     border: 1px solid #e4edf6;
 }
 
@@ -296,10 +294,11 @@ body {
 
 /* =========================
    STATS
-========================= */
+   ========================= */
 
 .stats-section {
     padding: 0;
+    background: #fff;
 }
 
 .stats {
@@ -317,7 +316,7 @@ body {
 }
 
 .stat:last-child {
-    border: 0;
+    border-right: 0;
 }
 
 .stat strong {
@@ -335,10 +334,11 @@ body {
 
 /* =========================
    SECTION
-========================= */
+   ========================= */
 
 .section {
     padding: 68px 0;
+    background: #fff;
 }
 
 .section.alt {
@@ -369,7 +369,7 @@ body {
 
 /* =========================
    NEWS CARDS
-========================= */
+   ========================= */
 
 .cards {
     display: grid;
@@ -406,7 +406,7 @@ body {
 
 /* =========================
    TABLE
-========================= */
+   ========================= */
 
 .table-wrap {
     overflow: auto;
@@ -445,7 +445,7 @@ td:last-child {
 
 /* =========================
    FEATURE
-========================= */
+   ========================= */
 
 .feature-grid {
     display: grid;
@@ -460,12 +460,12 @@ td:last-child {
     border-radius: 10px;
     text-decoration: none;
     color: inherit;
-    transition: 0.2s;
+    transition: .2s;
 }
 
 .feature:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
+    box-shadow: 0 8px 25px rgba(16, 24, 40, .08);
 }
 
 .feature span {
@@ -488,7 +488,7 @@ td:last-child {
 
 /* =========================
    TIMELINE
-========================= */
+   ========================= */
 
 .timeline {
     display: grid;
@@ -527,7 +527,7 @@ td:last-child {
 
 /* =========================
    EVIDENCE
-========================= */
+   ========================= */
 
 .evidence-box {
     display: flex;
@@ -559,7 +559,7 @@ td:last-child {
 
 /* =========================
    PUBLIC
-========================= */
+   ========================= */
 
 .public-grid {
     display: grid;
@@ -580,7 +580,7 @@ td:last-child {
 
 /* =========================
    SEARCH RESULTS
-========================= */
+   ========================= */
 
 .search-results-section {
     display: none;
@@ -613,14 +613,14 @@ td:last-child {
 
 /* =========================
    FOOTER
-========================= */
-
-.footer {
-    background: #0d2947;
-}
+   ========================= */
 
 .site-header + main {
     margin: 0;
+}
+
+.footer {
+    background: #0d2947;
 }
 
 footer {
@@ -649,7 +649,7 @@ footer {
 
 /* =========================
    MOBILE MENU
-========================= */
+   ========================= */
 
 .menu-toggle {
     display: none;
@@ -658,17 +658,19 @@ footer {
     font-size: 25px;
     color: #123b68;
     font-family: Arial, sans-serif;
+    cursor: pointer;
 }
 
 /* =========================
    TABLET
-========================= */
+   ========================= */
 
 @media (max-width: 850px) {
-
     .hero-content {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding-top: 45px;
+        padding-bottom: 45px;
     }
 
     .hero h1 {
@@ -717,16 +719,20 @@ footer {
 
 /* =========================
    MOBILE
-========================= */
+   ========================= */
 
 @media (max-width: 560px) {
-
     .topbar-inner {
         display: none;
     }
 
     .header-main {
         padding: 15px 0;
+    }
+
+    .brand-logo {
+        width: 58px;
+        height: 58px;
     }
 
     .brand-title {
@@ -738,7 +744,12 @@ footer {
     }
 
     .hero {
+        min-height: auto;
         padding: 45px 0;
+    }
+
+    .hero-content {
+        min-height: auto;
     }
 
     .hero h1 {
@@ -765,7 +776,7 @@ footer {
     }
 
     .section-heading {
-        align-items: start;
+        align-items: flex-start;
         gap: 10px;
     }
 
@@ -796,51 +807,8 @@ footer {
         padding: 12px;
         border-radius: 7px;
     }
-/* Đổi nền HERO sang trắng */
-.hero {
-    background: #ffffff !important;
-}
 
-/* Bỏ lớp nền/hiệu ứng xanh nếu có */
-.hero::before,
-.hero::after {
-    background: none !important;
-    opacity: 0 !important;
+    .hero-actions {
+        flex-wrap: wrap;
+    }
 }
-
-/* Chữ màu xanh đậm để dễ đọc */
-.hero h1,
-.hero p,
-.hero span {
-    color: #123b6d !important;
-}
-
-/* Dòng chữ nhỏ phía trên */
-.hero .eyebrow {
-    color: #1d6fb8 !important;
-}
-/* ===== HERO NỀN TRẮNG ===== */
-.hero {
-    background: #fff !important;
-}
-
-.hero-image {
-    display: none !important;
-}
-
-.hero::after {
-    display: none !important;
-    background: none !important;
-}
-
-.hero h1 {
-    color: #123b68 !important;
-}
-
-.hero p {
-    color: #475467 !important;
-}
-
-.hero .eyebrow {
-    color: #1970b8 !important;
-}    
