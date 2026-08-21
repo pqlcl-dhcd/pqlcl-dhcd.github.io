@@ -15,7 +15,7 @@
         và bộ đề thi - Phòng Quản lý chất lượng
     </title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 
     <style>
 
@@ -60,6 +60,7 @@
             color: #123b68;
             font-size: 22px;
             margin-top: 35px;
+            margin-bottom: 15px;
         }
 
         .file-box {
@@ -79,6 +80,7 @@
         .file-name {
             color: #123b68;
             font-weight: 600;
+            line-height: 1.6;
         }
 
         .file-button {
@@ -90,10 +92,12 @@
             border-radius: 7px;
             font-weight: 600;
             white-space: nowrap;
+            transition: 0.2s ease;
         }
 
         .file-button:hover {
             background: #0d4f87;
+            transform: translateY(-1px);
         }
 
         .back-button {
@@ -102,6 +106,10 @@
             color: #1261a0;
             text-decoration: none;
             font-weight: 600;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
@@ -139,10 +147,14 @@
         <article class="article">
 
 
+            <!-- PHÂN LOẠI -->
+
             <div class="article-category">
                 Thông báo
             </div>
 
+
+            <!-- TIÊU ĐỀ -->
 
             <h1>
                 Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi
@@ -150,38 +162,41 @@
             </h1>
 
 
+            <!-- NGÀY ĐĂNG -->
+
             <div class="article-date">
                 Ngày đăng: 17/08/2026
             </div>
 
 
+            <!-- NỘI DUNG -->
+
             <div class="article-content">
 
 
                 <p>
-
                     Phòng Quản lý chất lượng đăng tải Kế hoạch xây dựng,
                     chỉnh sửa, bổ sung ngân hàng câu hỏi và bộ đề thi
                     năm học 2026 - 2027 của Trường Đại học Công đoàn.
-
                 </p>
 
 
                 <p>
-
                     Số văn bản:
                     <strong>106/KH-ĐHCĐ</strong>
-
                 </p>
 
 
+                <!-- ============================== -->
+                <!-- VĂN BẢN KẾ HOẠCH PDF -->
+                <!-- ============================== -->
+
                 <h2>
-                    📎 Văn bản đính kèm
+                    📎 Văn bản kế hoạch
                 </h2>
 
 
                 <div class="file-box">
-
 
                     <div class="file-name">
 
@@ -198,11 +213,35 @@
                         target="_blank"
                         rel="noopener"
                     >
-
                         Xem văn bản PDF →
-
                     </a>
 
+                </div>
+
+
+                <!-- ============================== -->
+                <!-- BIỂU MẪU WORD -->
+                <!-- ============================== -->
+
+                <h2>
+                    📎 Biểu mẫu đính kèm
+                </h2>
+
+
+                <div class="file-box">
+
+                    <div class="file-name">
+                        📄 Mẫu XD NHCH, đề thi-QĐ.573.docx
+                    </div>
+
+
+                    <a
+                        class="file-button"
+                        href="../../M%E1%BA%ABu%20XD%20NHCH%2C%20%C4%91%E1%BB%81%20thi-Q%C4%90.573.docx"
+                        download
+                    >
+                        Tải biểu mẫu Word ↓
+                    </a>
 
                 </div>
 
@@ -210,13 +249,13 @@
             </div>
 
 
+            <!-- QUAY LẠI -->
+
             <a
                 class="back-button"
-                href="../index.html#news"
+                href="../../thong-bao.html"
             >
-
-                ← Quay lại Tin tức - Thông báo
-
+                ← Quay lại Thông báo
             </a>
 
 
@@ -230,39 +269,3 @@
 </body>
 
 </html>
-<div class="article-content">
-
-    <!-- Nội dung kế hoạch -->
-
-    <h2>
-        📎 Văn bản kế hoạch
-    </h2>
-
-    <!-- PDF -->
-    <div class="file-box">
-        ...
-    </div>
-
-
-    <h2>
-        📎 Biểu mẫu đính kèm
-    </h2>
-
-    <!-- WORD -->
-    <div class="file-box">
-
-        <div class="file-name">
-            📄 Mẫu XD NHCH, đề thi-QĐ.573.docx
-        </div>
-
-        <a
-            class="file-button"
-            href="../../M%E1%BA%ABu%20XD%20NHCH%2C%20%C4%91%E1%BB%81%20thi-Q%C4%90.573.docx"
-            download
-        >
-            Tải biểu mẫu Word ↓
-        </a>
-
-    </div>
-
-</div>
