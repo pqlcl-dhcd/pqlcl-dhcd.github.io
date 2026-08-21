@@ -6,6 +6,12 @@ const data = {
       text: "Triển khai mẫu xây dựng ngân hàng câu hỏi, đề thi theo Quyết định 573.",
       link: "documents/tin%20t%E1%BB%A9c/mau-xd-nhch-de-thi-qd-573.html"
     },
+     {
+      date: "17/08/2026",
+      title: "Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi và bộ đề thi năm học 2026 - 2027",
+      text: "Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi và bộ đề thi năm học 2026 - 2027 theo Văn bản số 106/KH-ĐHCĐ.",
+      link: "https://pqlcl-dhcd.github.io/documents/tin%20t%E1%BB%A9c/ke-hoach-xay-dung-chinh-sua-bo-sung-nhch-bo-de-thi-2026-2027.html"
+    },
     {
       date: "11/08/2026",
       title: "Cập nhật thông tin hoạt động quản lý chất lượng",
