@@ -819,4 +819,28 @@ footer {
 .hero .eyebrow {
     color: #1d6fb8 !important;
 }
-    
+/* ===== HERO NỀN TRẮNG ===== */
+.hero {
+    background: #fff !important;
+}
+
+.hero-image {
+    display: none !important;
+}
+
+.hero::after {
+    display: none !important;
+    background: none !important;
+}
+
+.hero h1 {
+    color: #123b68 !important;
+}
+
+.hero p {
+    color: #475467 !important;
+}
+
+.hero .eyebrow {
+    color: #1970b8 !important;
+}    
