@@ -4,7 +4,7 @@ const data = {
     date: "21/08/2026",
     title: "Mẫu XD NHCH, đề thi - QĐ.573",
     text: "Triển khai mẫu xây dựng ngân hàng câu hỏi, đề thi theo Quyết định 573.",
-    link: "tin-tuc/mau-xd-nhch-de-thi-qd-573.html"
+    link: "documents/tin%20t%E1%BB%A9c/mau-xd-nhch-de-thi-qd-573.html"
 },
     {date:"11/08/2026", title:"Cập nhật thông tin hoạt động quản lý chất lượng", text:"Thông tin mới nhất về hoạt động đảm bảo và cải tiến chất lượng của Nhà trường."},
     {date:"08/08/2026", title:"Thông báo triển khai khảo sát ý kiến người học", text:"Triển khai kế hoạch khảo sát và tổng hợp phản hồi phục vụ cải tiến."},
