@@ -1,227 +1,328 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Thông báo - Phòng Quản lý chất lượng</title>
+    <meta charset="UTF-8">
 
-  <link rel="stylesheet" href="style.css">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <style>
-    .document-page {
-      padding: 60px 0 80px;
-      background: #f8fafc;
-      min-height: calc(100vh - 200px);
-    }
+    <title>
+        Thông báo - Phòng Quản lý chất lượng
+    </title>
 
-    .document-header {
-      margin-bottom: 35px;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    .document-header h1 {
-      margin-bottom: 10px;
-    }
 
-    .document-header p {
-      color: #64748b;
-    }
+    <style>
 
-    .notice-list {
-      display: grid;
-      gap: 18px;
-    }
+        .document-page {
+            padding: 60px 0 80px;
+            background: #f8fafc;
+            min-height: calc(100vh - 200px);
+        }
 
-    .notice-card {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 24px;
-      transition: 0.2s ease;
-    }
 
-    .notice-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
-    }
+        .document-header {
+            margin-bottom: 35px;
+        }
 
-    .notice-date {
-      font-size: 14px;
-      color: #64748b;
-      margin-bottom: 8px;
-    }
 
-    .notice-card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: #0f172a;
-    }
+        .document-header h1 {
+            margin-bottom: 10px;
+            color: #123b68;
+        }
 
-    .notice-card p {
-      margin: 0 0 18px;
-      color: #475569;
-      line-height: 1.6;
-    }
 
-    .notice-link {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+        .document-header p {
+            color: #64748b;
+        }
+
+
+        .notice-list {
+            display: grid;
+            gap: 18px;
+        }
+
+
+        .notice-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+            transition: 0.2s ease;
+        }
+
+
+        .notice-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        }
+
+
+        .notice-date {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+
+        .notice-card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+
+
+        .notice-card p {
+            margin: 0 0 18px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+
+        .notice-link {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            color: #1261a0;
+        }
+
+
+        .notice-link:hover {
+            text-decoration: underline;
+        }
+
+
+        .back-home {
+            display: inline-block;
+            margin-top: 35px;
+            color: #1261a0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .document-page {
+                padding: 40px 0 60px;
+            }
+
+
+            .notice-card {
+                padding: 20px;
+            }
+
+
+            .notice-card h3 {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-  <main class="document-page">
+
+<main class="document-page">
 
     <div class="container">
 
-      <div class="document-header">
 
-        <h1>
-          Thông báo
-        </h1>
+        <!-- TIÊU ĐỀ -->
 
-        <p>
-          Các thông báo và thông tin liên quan đến hoạt động của Nhà trường
-          và Phòng Quản lý chất lượng.
-        </p>
+        <div class="document-header">
 
-      </div>
+            <h1>
+                Thông báo
+            </h1>
 
+            <p>
+                Các thông báo và thông tin liên quan đến hoạt động
+                của Nhà trường và Phòng Quản lý chất lượng.
+            </p>
 
-      <div class="notice-list">
-
-
-        <!-- ============================= -->
-        <!-- THÔNG BÁO 21/08/2026 -->
-        <!-- ============================= -->
-
-        <article class="notice-card">
-
-          <div class="notice-date">
-            21/08/2026
-          </div>
-
-          <h3>
-            Mẫu XD NHCH, đề thi - QĐ.573
-          </h3>
-
-          <p>
-            Triển khai mẫu xây dựng ngân hàng câu hỏi, đề thi theo Quyết định 573.
-          </p>
-
-          <a
-            class="view-all notice-link"
-            href="documents/tin%20t%E1%BB%A9c/mau-xd-nhch-de-thi-qd-573.html"
-          >
-            Xem chi tiết →
-          </a>
-
-        </article>
+        </div>
 
 
-        <!-- ============================= -->
-        <!-- THÔNG BÁO 17/08/2026 -->
-        <!-- ============================= -->
 
-        <article class="notice-card">
-
-          <div class="notice-date">
-            17/08/2026
-          </div>
-
-          <h3>
-            Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi
-            và bộ đề thi năm học 2026 - 2027
-          </h3>
-
-          <p>
-            Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi
-            và bộ đề thi năm học 2026 - 2027 theo Văn bản số
-            106/KH-ĐHCĐ ngày 17/08/2026.
-          </p>
-
-          <a
-            class="view-all notice-link"
-            href="documents/tin%20t%E1%BB%A9c/ke-hoach-xay-dung-chinh-sua-bo-sung-nhch-bo-de-thi-2026-2027.html"
-          >
-            Xem chi tiết →
-          </a>
-
-        </article>
+        <div class="notice-list">
 
 
-        <!-- ============================= -->
-        <!-- THÔNG BÁO 11/08/2026 -->
-        <!-- ============================= -->
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO 21/08/2026 -->
+            <!-- ================================================= -->
 
-        <article class="notice-card">
+            <article class="notice-card">
 
-          <div class="notice-date">
-            11/08/2026
-          </div>
-
-          <h3>
-            Cập nhật thông tin hoạt động quản lý chất lượng
-          </h3>
-
-          <p>
-            Thông tin mới nhất về hoạt động đảm bảo và cải tiến chất lượng
-            của Nhà trường.
-          </p>
-
-        </article>
+                <div class="notice-date">
+                    21/08/2026
+                </div>
 
 
-        <!-- ============================= -->
-        <!-- THÔNG BÁO 08/08/2026 -->
-        <!-- ============================= -->
-
-        <article class="notice-card">
-
-          <div class="notice-date">
-            08/08/2026
-          </div>
-
-          <h3>
-            Thông báo triển khai khảo sát ý kiến người học
-          </h3>
-
-          <p>
-            Triển khai kế hoạch khảo sát và tổng hợp phản hồi phục vụ cải tiến.
-          </p>
-
-        </article>
+                <h3>
+                    Mẫu XD NHCH, đề thi - QĐ.573
+                </h3>
 
 
-        <!-- ============================= -->
-        <!-- THÔNG BÁO 05/08/2026 -->
-        <!-- ============================= -->
-
-        <article class="notice-card">
-
-          <div class="notice-date">
-            05/08/2026
-          </div>
-
-          <h3>
-            Hướng dẫn quản lý và cập nhật minh chứng
-          </h3>
-
-          <p>
-            Hướng dẫn đơn vị cập nhật, chuẩn hóa và lưu trữ minh chứng.
-          </p>
-
-        </article>
+                <p>
+                    Triển khai mẫu xây dựng ngân hàng câu hỏi,
+                    đề thi theo Quyết định 573.
+                </p>
 
 
-      </div>
+                <a
+                    class="notice-link"
+                    href="documents/tin%20t%E1%BB%A9c/mau-xd-nhch-de-thi-qd-573.html"
+                >
+                    Xem chi tiết →
+                </a>
+
+            </article>
+
+
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO 17/08/2026 -->
+            <!-- ================================================= -->
+
+            <article class="notice-card">
+
+                <div class="notice-date">
+                    17/08/2026
+                </div>
+
+
+                <h3>
+                    Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi
+                    và bộ đề thi năm học 2026 - 2027
+                </h3>
+
+
+                <p>
+                    Kế hoạch xây dựng, chỉnh sửa, bổ sung ngân hàng câu hỏi
+                    và bộ đề thi năm học 2026 - 2027 theo Văn bản số
+                    106/KH-ĐHCĐ ngày 17/08/2026.
+                </p>
+
+
+                <a
+                    class="notice-link"
+                    href="documents/tin%20t%E1%BB%A9c/ke-hoach-xay-dung-chinh-sua-bo-sung-nhch-bo-de-thi-2026-2027.html"
+                >
+                    Xem chi tiết →
+                </a>
+
+            </article>
+
+
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO 11/08/2026 -->
+            <!-- ================================================= -->
+
+            <article class="notice-card">
+
+                <div class="notice-date">
+                    11/08/2026
+                </div>
+
+
+                <h3>
+                    Cập nhật thông tin hoạt động quản lý chất lượng
+                </h3>
+
+
+                <p>
+                    Thông tin mới nhất về hoạt động đảm bảo và
+                    cải tiến chất lượng của Nhà trường.
+                </p>
+
+            </article>
+
+
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO 08/08/2026 -->
+            <!-- ================================================= -->
+
+            <article class="notice-card">
+
+                <div class="notice-date">
+                    08/08/2026
+                </div>
+
+
+                <h3>
+                    Thông báo triển khai khảo sát ý kiến người học
+                </h3>
+
+
+                <p>
+                    Triển khai kế hoạch khảo sát và tổng hợp
+                    phản hồi phục vụ cải tiến.
+                </p>
+
+            </article>
+
+
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO 05/08/2026 -->
+            <!-- ================================================= -->
+
+            <article class="notice-card">
+
+                <div class="notice-date">
+                    05/08/2026
+                </div>
+
+
+                <h3>
+                    Hướng dẫn quản lý và cập nhật minh chứng
+                </h3>
+
+
+                <p>
+                    Hướng dẫn đơn vị cập nhật, chuẩn hóa và
+                    lưu trữ minh chứng.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- QUAY LẠI KHO VĂN BẢN -->
+
+        <a
+            href="van-ban.html"
+            class="back-home"
+        >
+            ← Quay lại Kho văn bản
+        </a>
+
 
     </div>
 
-  </main>
+</main>
+
 
 </body>
+
 </html>
