@@ -796,8 +796,3 @@ footer {
         padding: 12px;
         border-radius: 7px;
     }
-
-    min-height: 420px;
-    display: flex;
-    align-items: center;
-}
