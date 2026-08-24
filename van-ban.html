@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,325 +10,96 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* =====================================================
-           TRANG VĂN BẢN
-           ===================================================== */
-
         .document-page {
-            background: #ffffff;
+            padding: 60px 0 80px;
+            background: #f8fafc;
             min-height: 70vh;
-            padding: 55px 0 80px;
         }
 
         .document-header {
-            margin-bottom: 30px;
-        }
-
-        .document-header .eyebrow {
-            display: inline-block;
-            margin-bottom: 8px;
-            color: #1970b8;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
+            margin-bottom: 35px;
         }
 
         .document-header h1 {
-            margin: 0 0 12px;
+            margin: 8px 0 10px;
             color: #123b68;
             font-size: 36px;
-            line-height: 1.25;
             font-weight: 700;
         }
 
         .document-header p {
-            margin: 0;
-            max-width: 850px;
             color: #667085;
             font-size: 15px;
             line-height: 1.7;
         }
 
-
-        /* =====================================================
-           SỐ LƯỢNG VĂN BẢN
-           ===================================================== */
-
-        .document-count {
-            margin: 35px 0 20px;
-            color: #333333;
-            font-size: 20px;
-            font-weight: 400;
-        }
-
-        .document-count strong {
-            color: #0879b9;
-            font-size: 25px;
-            font-weight: 700;
-        }
-
-
-        /* =====================================================
-           DANH SÁCH VĂN BẢN
-           ===================================================== */
-
-        .document-list {
-            display: flex;
-            flex-direction: column;
+        .document-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 18px;
         }
 
-
-        /* =====================================================
-           CARD VĂN BẢN
-           ===================================================== */
-
-        .document-item {
-            background: #f5f5f5;
-            border: 1px solid #eeeeee;
-            border-radius: 3px;
-            padding: 25px 28px 24px;
-            transition: all 0.2s ease;
+        .document-category {
+            display: block;
+            padding: 25px;
+            background: #fff;
+            border: 1px solid #e4e7ec;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: 0.2s ease;
         }
 
-        .document-item:hover {
-            background: #f1f1f1;
-            border-color: #e2e2e2;
+        .document-category:hover {
+            transform: translateY(-3px);
+            border-color: #b9d2e8;
+            box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
         }
-
-
-        /* =====================================================
-           TIÊU ĐỀ
-           ===================================================== */
-
-        .document-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 17px;
-        }
-
-
-        /* Icon tài liệu */
 
         .document-icon {
-            width: 39px;
-            height: 44px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            flex-shrink: 0;
-
-            border: 3px solid #b21f55;
-            border-radius: 5px;
-
-            color: #b21f55;
-            background: #ffffff;
-
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 15px;
         }
 
+        .document-category h2 {
+            margin: 0 0 8px;
+            color: #123b68;
+            font-size: 18px;
+            font-weight: 600;
+        }
 
-        .document-title h2 {
+        .document-category p {
             margin: 0;
-
-            color: #111111;
-
-            font-size: 24px;
-            line-height: 1.35;
-
-            font-weight: 700;
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.6;
         }
 
-
-        /* =====================================================
-           MÔ TẢ
-           ===================================================== */
-
-        .document-description {
-            margin: 0 0 22px;
-
-            color: #333333;
-
-            font-size: 17px;
-            line-height: 1.65;
-        }
-
-
-        /* =====================================================
-           THÔNG TIN VĂN BẢN
-           ===================================================== */
-
-        .document-info {
-            margin-top: 5px;
-        }
-
-        .document-info-label {
-            margin-bottom: 5px;
-
-            color: #444444;
-
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        .document-info-value {
-            margin-bottom: 22px;
-
-            color: #222222;
-
-            font-size: 17px;
-            line-height: 1.5;
-
-            font-weight: 700;
-        }
-
-
-        /* =====================================================
-           THUỘC TÍNH
-           ===================================================== */
-
-        .document-properties {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-
-            margin-top: 2px;
-
-            color: #333333;
-
-            font-size: 16px;
-            font-weight: 500;
-
-            text-decoration: none;
-
-            cursor: pointer;
-        }
-
-        .document-properties:hover {
-            color: #b21f55;
-            text-decoration: underline;
-        }
-
-
-        /* =====================================================
-           HEADER
-           ===================================================== */
-
-        .document-back {
+        .back-home {
             display: inline-block;
-
+            margin-bottom: 25px;
             color: #1261a0;
-
+            text-decoration: none;
             font-size: 14px;
             font-weight: 600;
-
-            text-decoration: none;
         }
 
-        .document-back:hover {
+        .back-home:hover {
             text-decoration: underline;
         }
 
-
-        /* =====================================================
-           FOOTER
-           ===================================================== */
-
-        .document-footer {
-            margin-top: 0;
-        }
-
-
-        /* =====================================================
-           TABLET
-           ===================================================== */
-
         @media (max-width: 850px) {
-
-            .document-page {
-                padding: 45px 0 65px;
+            .document-grid {
+                grid-template-columns: 1fr 1fr;
             }
-
-            .document-header h1 {
-                font-size: 32px;
-            }
-
-            .document-title h2 {
-                font-size: 22px;
-            }
-
         }
-
-
-        /* =====================================================
-           MOBILE
-           ===================================================== */
 
         @media (max-width: 560px) {
-
-            .document-page {
-                padding: 35px 0 55px;
-            }
-
-            .document-header {
-                margin-bottom: 25px;
+            .document-grid {
+                grid-template-columns: 1fr;
             }
 
             .document-header h1 {
-                font-size: 28px;
-            }
-
-            .document-header p {
-                font-size: 14px;
-            }
-
-            .document-count {
-                margin-top: 28px;
-                font-size: 18px;
-            }
-
-            .document-count strong {
-                font-size: 22px;
-            }
-
-            .document-item {
-                padding: 20px 17px;
-            }
-
-            .document-title {
-                align-items: flex-start;
-                gap: 12px;
-            }
-
-            .document-icon {
-                width: 34px;
-                height: 39px;
-
-                font-size: 18px;
-            }
-
-            .document-title h2 {
-                font-size: 20px;
-            }
-
-            .document-description {
-                font-size: 16px;
-            }
-
-            .document-info-label {
-                font-size: 15px;
-            }
-
-            .document-info-value {
-                font-size: 16px;
-            }
-
-            .document-properties {
-                font-size: 15px;
+                font-size: 30px;
             }
         }
     </style>
@@ -336,10 +108,6 @@
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
 
 <header class="site-header">
 
@@ -377,7 +145,7 @@
 
         <a
             href="index.html"
-            class="document-back"
+            class="back-home"
         >
             ← Trang chủ
         </a>
@@ -387,19 +155,11 @@
 </header>
 
 
-
-<!-- =====================================================
-     NỘI DUNG
-     ===================================================== -->
-
 <main>
 
     <section class="document-page">
 
         <div class="container">
-
-
-            <!-- TIÊU ĐỀ -->
 
             <div class="document-header">
 
@@ -419,254 +179,145 @@
             </div>
 
 
-            <!-- SỐ LƯỢNG -->
-
-            <div class="document-count">
-
-                Tìm thấy
-                <strong>4</strong>
-                văn bản
-
-            </div>
+            <div class="document-grid">
 
 
-            <!-- =================================================
-                 DANH SÁCH VĂN BẢN
-                 ================================================= -->
+                <!-- VĂN BẢN PHÁP LUẬT -->
 
-            <div class="document-list">
+                <a
+                    href="documents/phap-luat.html"
+                    class="document-category"
+                >
 
-
-                <!-- VĂN BẢN 1 -->
-
-                <article class="document-item">
-
-                    <div class="document-title">
-
-                        <div class="document-icon">
-                            ▤
-                        </div>
-
-                        <h2>
-                            Quy định về công tác đảm bảo chất lượng
-                        </h2>
-
+                    <div class="document-icon">
+                        📁
                     </div>
 
+                    <h2>
+                        Văn bản pháp luật
+                    </h2>
 
-                    <p class="document-description">
-
-                        Quy định về công tác đảm bảo chất lượng
-                        trong Nhà trường.
-
+                    <p>
+                        Luật, nghị định, thông tư và các văn bản
+                        quy phạm pháp luật.
                     </p>
 
-
-                    <div class="document-info">
-
-                        <div class="document-info-label">
-                            Ngày ban hành:
-                        </div>
-
-                        <div class="document-info-value">
-                            05/08/2026
-                        </div>
+                </a>
 
 
-                        <div class="document-info-label">
-                            Hiệu lực:
-                        </div>
+                <!-- QUYẾT ĐỊNH -->
 
-                        <div class="document-info-value">
-                            -
-                        </div>
+                <a
+                    href="documents/quyet-dinh.html"
+                    class="document-category"
+                >
 
+                    <div class="document-icon">
+                        📁
                     </div>
 
+                    <h2>
+                        Quyết định
+                    </h2>
 
-                    <a
-                        href="#"
-                        class="document-properties"
-                    >
-                        ☷ &nbsp; THUỘC TÍNH
-                    </a>
-
-                </article>
-
-
-
-                <!-- VĂN BẢN 2 -->
-
-                <article class="document-item">
-
-                    <div class="document-title">
-
-                        <div class="document-icon">
-                            ▤
-                        </div>
-
-                        <h2>
-                            Hướng dẫn thu thập và quản lý minh chứng
-                        </h2>
-
-                    </div>
-
-
-                    <p class="document-description">
-
-                        Hướng dẫn các đơn vị thu thập, chuẩn hóa
-                        và lưu trữ minh chứng phục vụ công tác
-                        đảm bảo chất lượng.
-
+                    <p>
+                        Các quyết định liên quan đến công tác
+                        quản lý chất lượng.
                     </p>
 
-
-                    <div class="document-info">
-
-                        <div class="document-info-label">
-                            Ngày ban hành:
-                        </div>
-
-                        <div class="document-info-value">
-                            02/08/2026
-                        </div>
+                </a>
 
 
-                        <div class="document-info-label">
-                            Hiệu lực:
-                        </div>
+                <!-- QUY ĐỊNH -->
 
-                        <div class="document-info-value">
-                            -
-                        </div>
+                <a
+                    href="documents/quy-dinh.html"
+                    class="document-category"
+                >
 
+                    <div class="document-icon">
+                        📁
                     </div>
 
+                    <h2>
+                        Quy định
+                    </h2>
 
-                    <a
-                        href="#"
-                        class="document-properties"
-                    >
-                        ☷ &nbsp; THUỘC TÍNH
-                    </a>
-
-                </article>
-
-
-
-                <!-- VĂN BẢN 3 -->
-
-                <article class="document-item">
-
-                    <div class="document-title">
-
-                        <div class="document-icon">
-                            ▤
-                        </div>
-
-                        <h2>
-                            Thông báo về kế hoạch khảo sát người học
-                        </h2>
-
-                    </div>
-
-
-                    <p class="document-description">
-
-                        Thông báo về kế hoạch triển khai khảo sát
-                        ý kiến người học phục vụ cải tiến chất lượng.
-
+                    <p>
+                        Các quy định, quy chế và văn bản
+                        quản lý nội bộ.
                     </p>
 
-
-                    <div class="document-info">
-
-                        <div class="document-info-label">
-                            Ngày ban hành:
-                        </div>
-
-                        <div class="document-info-value">
-                            28/07/2026
-                        </div>
+                </a>
 
 
-                        <div class="document-info-label">
-                            Hiệu lực:
-                        </div>
+                <!-- HƯỚNG DẪN -->
 
-                        <div class="document-info-value">
-                            -
-                        </div>
+                <a
+                    href="documents/huong-dan.html"
+                    class="document-category"
+                >
 
+                    <div class="document-icon">
+                        📁
                     </div>
 
+                    <h2>
+                        Hướng dẫn
+                    </h2>
 
-                    <a
-                        href="#"
-                        class="document-properties"
-                    >
-                        ☷ &nbsp; THUỘC TÍNH
-                    </a>
-
-                </article>
-
-
-
-                <!-- VĂN BẢN 4 -->
-
-                <article class="document-item">
-
-                    <div class="document-title">
-
-                        <div class="document-icon">
-                            ▤
-                        </div>
-
-                        <h2>
-                            Báo cáo kết quả hoạt động đảm bảo chất lượng
-                        </h2>
-
-                    </div>
-
-
-                    <p class="document-description">
-
-                        Báo cáo kết quả thực hiện các hoạt động
+                    <p>
+                        Các hướng dẫn thực hiện công tác
                         đảm bảo và cải tiến chất lượng.
-
                     </p>
 
-
-                    <div class="document-info">
-
-                        <div class="document-info-label">
-                            Ngày ban hành:
-                        </div>
-
-                        <div class="document-info-value">
-                            20/07/2026
-                        </div>
+                </a>
 
 
-                        <div class="document-info-label">
-                            Hiệu lực:
-                        </div>
+                <!-- THÔNG BÁO -->
 
-                        <div class="document-info-value">
-                            -
-                        </div>
+                <a
+                    href="documents/thong-bao.html"
+                    class="document-category"
+                >
 
+                    <div class="document-icon">
+                        📁
                     </div>
 
+                    <h2>
+                        Thông báo
+                    </h2>
 
-                    <a
-                        href="#"
-                        class="document-properties"
-                    >
-                        ☷ &nbsp; THUỘC TÍNH
-                    </a>
+                    <p>
+                        Các thông báo của Nhà trường và
+                        Phòng Quản lý chất lượng.
+                    </p>
 
-                </article>
+                </a>
+
+
+                <!-- BÁO CÁO -->
+
+                <a
+                    href="documents/bao-cao.html"
+                    class="document-category"
+                >
+
+                    <div class="document-icon">
+                        📁
+                    </div>
+
+                    <h2>
+                        Báo cáo
+                    </h2>
+
+                    <p>
+                        Các báo cáo về hoạt động quản lý,
+                        đảm bảo và kiểm định chất lượng.
+                    </p>
+
+                </a>
 
 
             </div>
@@ -678,15 +329,9 @@
 </main>
 
 
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer class="document-footer">
+<footer>
 
     <div class="container footer-grid">
-
 
         <div>
 
@@ -725,7 +370,6 @@
             </p>
 
         </div>
-
 
     </div>
 
