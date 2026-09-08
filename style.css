@@ -812,3 +812,6 @@ footer {
         flex-wrap: wrap;
     }
 }
+.header-main {
+    display: none !important;
+}
