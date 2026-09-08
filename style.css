@@ -812,19 +812,3 @@ footer {
         flex-wrap: wrap;
     }
 }
-.header-main {
-    display: none !important;
-}
-/* Ẩn header chung trên các trang văn bản */
-.site-header {
-    display: none !important;
-}
-
-/* =========================================================
-   TRANG VĂN BẢN - ẨN HEADER CHỈ TRÊN 6 TRANG VĂN BẢN
-   Không ảnh hưởng đến trang chủ
-   ========================================================= */
-
-body:has(a[href="../kho-van-ban.html"]) .site-header {
-    display: none !important;
-}
