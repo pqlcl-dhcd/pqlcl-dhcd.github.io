@@ -815,3 +815,7 @@ footer {
 .header-main {
     display: none !important;
 }
+/* Ẩn header chung trên các trang văn bản */
+.site-header {
+    display: none !important;
+}
