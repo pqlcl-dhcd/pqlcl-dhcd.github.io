@@ -175,7 +175,7 @@ async function loadDocuments() {
 
             const name = document.createElement("a");
             name.className = "document-name";
-            name.href = file.html_url;
+            name.href = "./IV-noi-bo-dam-bao-chat-luong/" + encodeURIComponent(file.name);
             name.target = "_blank";
             name.rel = "noopener";
             name.textContent = file.name;
@@ -200,7 +200,7 @@ async function loadDocuments() {
 
             const view = document.createElement("a");
             view.className = "document-view";
-            view.href = file.html_url;
+            view.href = "./IV-noi-bo-dam-bao-chat-luong/" + encodeURIComponent(file.name);
             view.target = "_blank";
             view.rel = "noopener";
             view.textContent = "Xem văn bản →";
