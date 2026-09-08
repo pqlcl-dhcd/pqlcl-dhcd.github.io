@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông báo | Phòng Quản lý chất lượng</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .document-page {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 25px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .document-title {
+      margin-bottom: 30px;
+    }
+
+    .document-title h1 {
+      margin-bottom: 10px;
+    }
+
+    .document-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .document-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .document-name {
+      font-weight: 600;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .document-type {
+      flex-shrink: 0;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: #f3f4f6;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .document-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .document-item:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .empty-message {
+      padding: 30px;
+      text-align: center;
+      background: #f8fafc;
+      border-radius: 10px;
+      color: #64748b;
+    }
+
+    @media (max-width: 700px) {
+      .document-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="document-page">
+
+  <a href="../van-ban.html" class="back-link">
+    ← Quay lại Kho văn bản
+  </a>
+
+  <div class="document-title">
+    <h1>Thông báo</h1>
+    <p>Danh mục văn bản</p>
+  </div>
+
+  <div id="documentList" class="document-list">
+    <div class="empty-message">Đang tải danh sách văn bản...</div>
+  </div>
+
+</main>
+
+<script>
+const owner = "pqlcl-dhcd";
+const repo = "pqlcl-dhcd.github.io";
+const folder = "documents/thong-bao";
+
+const list = document.getElementById("documentList");
+
+async function loadDocuments() {
+  try {
+    const apiUrl =
+      `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(folder)}`;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error("Không thể truy cập thư mục");
+    }
+
+    const files = await response.json();
+
+    const documentFiles = files.filter(file => {
+      if (file.type !== "file") return false;
+
+      const name = file.name.toLowerCase();
+
+      return name.endsWith(".pdf") || name.endsWith(".docx");
+    });
+
+    documentFiles.sort((a, b) =>
+      a.name.localeCompare(b.name, "vi", { numeric: true })
+    );
+
+    if (documentFiles.length === 0) {
+      list.innerHTML = `
+        <div class="empty-message">
+          Chưa có văn bản trong thư mục này.
+        </div>
+      `;
+      return;
+    }
+
+    list.innerHTML = "";
+
+    documentFiles.forEach(file => {
+
+      const extension =
+        file.name.toLowerCase().endsWith(".pdf") ? "PDF" : "DOCX";
+
+      const relativeUrl =
+        `thong-bao/${encodeURIComponent(file.name)}`;
+
+      const item = document.createElement("div");
+      item.className = "document-item";
+
+      item.innerHTML = `
+        <a class="document-name"
+           href="${relativeUrl}"
+           target="_blank"
+           rel="noopener noreferrer">
+          ${file.name}
+        </a>
+
+        <span class="document-type">
+          ${extension}
+        </span>
+      `;
+
+      list.appendChild(item);
+    });
+
+  } catch (error) {
+
+    console.error(error);
+
+    list.innerHTML = `
+      <div class="empty-message">
+        Không thể tải danh sách văn bản.
+      </div>
+    `;
+  }
+}
+
+loadDocuments();
+</script>
+
+</body>
+</html>
