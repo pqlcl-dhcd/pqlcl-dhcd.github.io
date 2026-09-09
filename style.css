@@ -28,7 +28,7 @@ a { color: inherit; }
 
 /* ===== TOP BAR ===== */
 .topbar {
-    background: #8d1626;
+    background: #1976B8;
     color: #fff;
     font-size: 12px;
 }
@@ -61,20 +61,20 @@ a { color: inherit; }
     text-decoration: none;
 }
 .brand-logo {
-    width: 68px !important;
-    height: 68px !important;
-    max-width: 68px !important;
-    max-height: 68px !important;
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
     object-fit: contain !important;
     display: block !important;
-    flex: 0 0 68px;
+    flex: 0 0 48px;
 }
 .brand-text {
     display: flex;
     flex-direction: column;
 }
 .brand-title {
-    color: #8d1626;
+    color: #1976B8;
     font-size: 23px;
     line-height: 1.25;
     font-weight: 700;
@@ -87,7 +87,7 @@ a { color: inherit; }
 
 /* ===== MENU ===== */
 .nav {
-    background: #8d1626;
+    background: #1976B8;
     border: 0;
     position: sticky;
     top: 0;
@@ -116,15 +116,15 @@ a { color: inherit; }
 }
 .nav a:hover,
 .nav a.active {
-    background: #74111f;
+    background: #1565A8;
     color: #fff;
-    border-bottom-color: #f2c14e;
+    border-bottom-color: #8fd3ff;
 }
 .menu-toggle {
     display: none;
     border: 0;
     background: transparent;
-    color: #8d1626;
+    color: #1976B8;
     font-size: 25px;
     cursor: pointer;
 }
@@ -152,7 +152,7 @@ a { color: inherit; }
     padding: 52px 0;
 }
 .eyebrow {
-    color: #8d1626;
+    color: #1976B8;
     font-size: 12px;
     font-weight: 700 !important;
     letter-spacing: 1px;
@@ -165,7 +165,7 @@ a { color: inherit; }
     font-weight: 600;
 }
 .hero h1 strong {
-    color: #8d1626 !important;
+    color: #1976B8 !important;
     font-weight: 700;
 }
 .hero p {
@@ -193,15 +193,15 @@ a { color: inherit; }
     cursor: pointer;
 }
 .btn.primary {
-    background: #8d1626;
+    background: #1976B8;
     color: #fff;
-    border: 1px solid #8d1626;
+    border: 1px solid #1976B8;
 }
-.btn.primary:hover { background: #74111f; }
+.btn.primary:hover { background: #1565A8; }
 .btn.secondary {
     background: #fff;
-    color: #8d1626;
-    border: 1px solid #8d1626;
+    color: #1976B8;
+    border: 1px solid #1976B8;
 }
 
 /* ===== SEARCH ===== */
@@ -213,12 +213,12 @@ a { color: inherit; }
     box-shadow: 0 3px 12px rgba(0,0,0,.06);
 }
 .hero-card-label {
-    color: #8d1626;
+    color: #1976B8;
     font-size: 14px;
     font-weight: 700;
     padding-bottom: 12px;
     margin-bottom: 14px;
-    border-bottom: 2px solid #8d1626;
+    border-bottom: 2px solid #1976B8;
 }
 .search-box { display: flex; }
 .search-box input {
@@ -235,7 +235,7 @@ a { color: inherit; }
 .search-box button {
     height: 40px;
     padding: 0 15px;
-    background: #8d1626;
+    background: #1976B8;
     color: #fff;
     border: 0;
     border-radius: 0 2px 2px 0;
@@ -274,7 +274,7 @@ a { color: inherit; }
 .stat:last-child { border-right: 0; }
 .stat strong {
     display: block;
-    color: #8d1626;
+    color: #1976B8;
     font-size: 24px;
     line-height: 1.2;
 }
@@ -296,7 +296,7 @@ a { color: inherit; }
     gap: 20px;
     margin-bottom: 22px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #8d1626;
+    border-bottom: 2px solid #1976B8;
 }
 .section-heading h2 {
     margin: 3px 0 0;
@@ -305,11 +305,11 @@ a { color: inherit; }
     line-height: 1.3;
 }
 .section-heading .eyebrow {
-    color: #8d1626;
+    color: #1976B8;
     font-size: 11px;
 }
 .view-all {
-    color: #8d1626;
+    color: #1976B8;
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
@@ -346,7 +346,7 @@ a { color: inherit; }
 .card h3 a {
     text-decoration: none;
 }
-.card h3 a:hover { color: #8d1626; }
+.card h3 a:hover { color: #1976B8; }
 .card p {
     margin: 0;
     color: #666;
@@ -372,7 +372,7 @@ th, td {
     vertical-align: middle;
 }
 th {
-    background: #8d1626;
+    background: #1976B8;
     color: #fff;
     font-weight: 600;
     white-space: nowrap;
@@ -380,7 +380,7 @@ th {
 td { color: #444; }
 tbody tr:hover { background: #fafafa; }
 td a {
-    color: #8d1626;
+    color: #1976B8;
     text-decoration: none;
     font-weight: 600;
 }
@@ -403,12 +403,12 @@ td:last-child { text-align: center; }
     transition: .2s;
 }
 .feature:hover {
-    border-color: #8d1626;
+    border-color: #1976B8;
     box-shadow: 0 4px 12px rgba(0,0,0,.06);
     transform: translateY(-2px);
 }
 .feature span {
-    color: #8d1626;
+    color: #1976B8;
     font-size: 11px;
     font-weight: 700;
 }
@@ -429,7 +429,7 @@ td:last-child { text-align: center; }
 }
 .timeline > div {
     padding: 20px;
-    border-top: 2px solid #8d1626;
+    border-top: 2px solid #1976B8;
     border-right: 1px solid #ddd;
 }
 .timeline > div:last-child { border-right: 0; }
@@ -438,7 +438,7 @@ td:last-child { text-align: center; }
     place-items: center;
     width: 30px;
     height: 30px;
-    background: #8d1626;
+    background: #1976B8;
     color: #fff;
     border-radius: 50%;
     font-size: 11px;
@@ -459,7 +459,7 @@ td:last-child { text-align: center; }
     justify-content: space-between;
     gap: 25px;
     padding: 28px 32px;
-    background: #8d1626;
+    background: #1976B8;
     color: #fff;
     border-radius: 2px;
 }
@@ -485,14 +485,14 @@ td:last-child { text-align: center; }
     padding: 15px 18px;
     background: #fff;
     border: 1px solid #ddd;
-    border-left: 3px solid #8d1626;
+    border-left: 3px solid #1976B8;
     color: #444;
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
 }
 .public-grid a:hover {
-    color: #8d1626;
+    color: #1976B8;
     background: #fafafa;
 }
 
@@ -575,11 +575,11 @@ footer { padding: 35px 0; }
     }
 
     .brand-logo {
-        width: 54px !important;
-        height: 54px !important;
-        max-width: 54px !important;
-        max-height: 54px !important;
-        flex-basis: 54px;
+        width: 42px !important;
+        height: 42px !important;
+        max-width: 42px !important;
+        max-height: 42px !important;
+        flex-basis: 42px;
     }
 
     .brand-title { font-size: 17px; }
