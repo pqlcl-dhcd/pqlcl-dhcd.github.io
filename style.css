@@ -403,3 +403,31 @@ footer{background:linear-gradient(135deg,#0a3859,#0d608f 65%,#0b527c);border-top
     .section{padding:46px 0}
     .section-title h2{font-size:23px}
 }
+/* ===== FIX MÀU CHỮ MENU ===== */
+.site-nav a,
+.site-nav a:link,
+.site-nav a:visited {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: #ffffff !important;
+}
+
+/* Menu đang chọn */
+.site-nav a.active,
+.site-nav a[aria-current="page"] {
+    color: #ffffff !important;
+}
+/* ===== DROPDOWN MENU ===== */
+.site-nav .dropdown-menu a,
+.site-nav .submenu a {
+    color: #163b5c !important;
+}
+
+.site-nav .dropdown-menu a:hover,
+.site-nav .submenu a:hover {
+    color: #1976b8 !important;
+}
