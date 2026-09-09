@@ -234,3 +234,172 @@ footer p{margin:5px 0;color:#c9dce7;font-size:12.5px}
     .search-box input{width:100%;border-right:1px solid #cbdbe5;border-radius:5px}
     .search-box button{width:100%;margin-top:8px;border-radius:5px}
 }
+
+/* =========================================================
+   GIAO DIỆN NÂNG CẤP - BẢN 2
+   Chỉ CSS, không thay đổi HTML/JS
+   ========================================================= */
+:root{
+    --blue:#1479bd;
+    --blue-dark:#0d5f98;
+    --blue-deep:#0b3d62;
+    --cyan:#39a9df;
+    --blue-light:#edf8fe;
+    --bg:#f3f8fb;
+    --line:#d8e7ef;
+    --text:#203847;
+    --muted:#6b7d87;
+    --shadow:0 12px 34px rgba(13,72,105,.09);
+}
+
+body{background:#f3f7fa;color:var(--text)}
+.container{width:min(1220px,calc(100% - 40px))}
+
+/* TOPBAR */
+.topbar{background:linear-gradient(100deg,#0b4f7d,#1479bd 48%,#0b4f7d);font-size:11.5px;letter-spacing:.15px}
+.topbar-inner{min-height:32px}
+
+/* HEADER */
+.site-header{background:#fff;box-shadow:0 2px 15px rgba(13,72,105,.05);border-bottom:1px solid #dceaf1}
+.header-inner{height:92px}
+.site-header .brand{gap:13px}
+.site-header .brand-logo{width:38px!important;height:38px!important;max-width:38px!important;max-height:38px!important;flex-basis:38px!important}
+.site-header .brand-text strong{font-size:23px;letter-spacing:.2px}
+.site-header .brand-text small{font-size:10.5px;letter-spacing:1px;color:#71818b}
+.header-tools a{padding:8px 12px;border-radius:4px}
+.header-tools a:hover{background:var(--blue-light)}
+#searchBtn{border-radius:50%;width:36px;height:36px}
+
+/* NAV */
+.main-nav{background:#0d6099;box-shadow:0 4px 16px rgba(7,60,91,.16)}
+.nav-inner{justify-content:center}
+.main-nav>a,.dropdown>a{min-height:51px;padding:0 16px;font-size:11.5px;letter-spacing:.1px}
+.main-nav>a:hover,.main-nav>a.active,.dropdown>a:hover{background:rgba(255,255,255,.12);border-bottom-color:#75cef6}
+.dropdown-menu{top:51px;border:0;border-top:3px solid #39a9df;border-radius:0 0 7px 7px;box-shadow:0 15px 35px rgba(8,55,82,.16)}
+.dropdown-menu a{padding:11px 15px}
+
+/* HERO */
+.hero{background:linear-gradient(115deg,#eaf7fd 0%,#fff 48%,#dff2fb 100%);border-bottom:0}
+.hero:before{width:650px;height:650px;right:-300px;top:-360px;border:90px solid rgba(20,121,189,.06)}
+.hero:after{width:430px;height:430px;left:-280px;bottom:-310px;border:70px solid rgba(20,121,189,.05)}
+.hero-inner{min-height:385px;padding:50px 0 55px;grid-template-columns:minmax(0,1.45fr) 350px;gap:65px}
+.crumb{padding:6px 13px;border-left:4px solid var(--blue);background:#fff;color:#12699f;border-radius:0 4px 4px 0;box-shadow:0 4px 15px rgba(20,121,189,.06)}
+.hero h1{font-size:48px;line-height:1.08;margin:16px 0 16px;color:#183a4e;letter-spacing:-1px}
+.hero h1 span{color:#1179bd}
+.hero p{max-width:720px;font-size:15px;color:#61737d}
+.hero-btn{border-radius:4px;padding:12px 24px;box-shadow:0 9px 22px rgba(20,121,189,.2)}
+.hero-card{min-height:260px;border-radius:12px;border:1px solid #cfe3ed;box-shadow:0 16px 40px rgba(13,72,105,.11);background:rgba(255,255,255,.94)}
+.hero-card:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,#1479bd,#58c1eb)}
+.hero-logo{width:76px!important;height:76px!important;margin-bottom:15px}
+.hero-card b{font-size:17px;letter-spacing:.2px}
+
+/* QUICK CARDS */
+.quick{margin-top:-28px;gap:16px}
+.quick>a{min-height:118px;border:1px solid #d4e5ee;border-top:0;border-radius:9px;padding:20px 21px;box-shadow:0 10px 28px rgba(12,69,101,.1);position:relative;overflow:hidden}
+.quick>a:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1174b6,#42b2e5)}
+.quick>a:after{content:"";position:absolute;width:70px;height:70px;border-radius:50%;right:-30px;bottom:-32px;background:rgba(20,121,189,.045)}
+.quick b{font-size:14.5px;color:#174d6d;position:relative;z-index:1}
+.quick span{position:relative;z-index:1}
+.quick>a:hover{transform:translateY(-6px);box-shadow:0 17px 34px rgba(12,69,101,.14)}
+
+/* SECTIONS */
+.section{padding:60px 0}
+.section.alt{background:linear-gradient(180deg,#f4f9fc 0%,#edf6fa 100%)}
+.section-title{margin-bottom:25px;padding-bottom:13px}
+.section-title:after{width:82px;height:3px;background:linear-gradient(90deg,#1179bd,#54b9e6)}
+.section-title h2{font-size:27px;color:#1c4054}
+.section-title>div>span,.eyebrow{font-size:10.5px;color:#1479bd;letter-spacing:1.5px}
+
+/* EMPTY LISTS - tránh khoảng trắng chết khi chưa có dữ liệu */
+.news-grid:empty{display:block;min-height:112px}
+.news-grid:empty:before{content:"Chưa có tin tức mới";display:flex;align-items:center;justify-content:center;min-height:112px;border:1px dashed #c9dce7;border-radius:9px;background:linear-gradient(135deg,#fbfdfe,#f2f8fb);color:#81919a;font-size:13px}
+.notice-list:empty{min-height:112px;padding:0}
+.notice-list:empty:before{content:"Chưa có thông báo mới";display:flex;align-items:center;justify-content:center;min-height:112px;border:1px dashed #c9dce7;border-radius:8px;background:#fbfdfe;color:#81919a;font-size:13px}
+
+/* NEWS */
+.news-grid{gap:18px}
+.news-card,.card{border-radius:9px;border-color:#d7e6ee;padding:20px;box-shadow:0 5px 16px rgba(15,65,91,.045)}
+.news-card:hover,.card:hover{border-color:#acd1e3;box-shadow:0 14px 28px rgba(15,65,91,.1)}
+.card h3{font-size:15.5px;color:#23475b}
+
+/* NOTICE */
+.two-col{grid-template-columns:minmax(0,1fr) 300px;gap:25px}
+.notice-list{gap:9px}
+.notice-list>*{border-left:4px solid #1984c7;border-radius:7px;box-shadow:0 4px 14px rgba(15,65,91,.045)}
+.notice-list>*:hover{transform:translateX(5px);border-color:#acd1e3}
+.side-box{border-radius:9px;box-shadow:0 8px 22px rgba(15,65,91,.06)}
+
+/* INTRO */
+.intro{gap:55px}
+.intro h2{font-size:29px}
+
+/* STATS */
+.stats{box-shadow:0 10px 27px rgba(15,65,91,.07);border-radius:10px}
+.stats>div{padding:27px 15px}
+.stats strong{font-size:30px}
+
+/* QUALITY CARDS */
+.cards{gap:17px}
+.cards article{border-radius:9px;padding:22px;min-height:180px;box-shadow:0 6px 17px rgba(15,65,91,.045)}
+.cards article:hover{box-shadow:0 15px 30px rgba(15,65,91,.11)}
+.cards i{width:42px;height:42px;background:#e9f6fd;border:1px solid #d2eaf5}
+.cards h3{font-size:15.5px}
+
+/* ACCREDITATION */
+.accredit{gap:17px}
+.accredit a{min-height:145px;border-radius:9px;padding:23px;box-shadow:0 6px 18px rgba(15,65,91,.045);display:flex;flex-direction:column;justify-content:center}
+.accredit a:before{content:"";width:35px;height:3px;background:#1479bd;margin-bottom:13px}
+.accredit b{font-size:16px}
+
+/* RANKING */
+.ranking{padding:4px 0}
+.rank-box{min-height:132px;border-radius:9px;box-shadow:0 7px 19px rgba(15,65,91,.055)}
+.rank-box strong{font-size:29px}
+
+/* EXAM */
+.exam-grid{gap:13px}
+.exam-grid a{min-height:70px;border-radius:8px;box-shadow:0 4px 13px rgba(15,65,91,.045)}
+
+/* SEARCH */
+.search-area{background:linear-gradient(110deg,#eaf7fd,#fff 60%,#e7f5fb)!important}
+.search-area .section-title{border-bottom-color:#cfe2ec}
+.search-box{max-width:900px;box-shadow:0 8px 24px rgba(15,65,91,.07);border-radius:6px}
+.search-box input,.search-box button{height:50px}
+
+/* FOOTER */
+footer{background:linear-gradient(135deg,#0a3859,#0d608f 65%,#0b527c);border-top:4px solid #35a8dd;padding-top:42px}
+.footer-grid{gap:48px}
+.footer-grid a{transition:.15s}
+.footer-grid a:hover{padding-left:3px;text-decoration:none}
+.copyright{margin-top:30px}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+    .container{width:min(960px,calc(100% - 30px))}
+    .hero-inner{grid-template-columns:1fr 310px;gap:35px}
+    .hero h1{font-size:41px}
+    .main-nav>a,.dropdown>a{padding:0 10px;font-size:10.5px}
+}
+@media(max-width:800px){
+    .container{width:calc(100% - 24px)}
+    .header-inner{height:80px}
+    .site-header .brand-logo{width:31px!important;height:31px!important;max-width:31px!important;max-height:31px!important;flex-basis:31px!important}
+    .site-header .brand-text strong{font-size:19px!important}
+    .hero-inner{grid-template-columns:1fr;min-height:0;padding:45px 0 48px;gap:25px}
+    .hero h1{font-size:36px}
+    .hero-card{max-width:390px;margin:auto}
+    .quick{margin-top:-22px}
+    .two-col{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+    .container{width:calc(100% - 18px)}
+    .header-inner{height:72px}
+    .site-header .brand-logo{width:27px!important;height:27px!important;max-width:27px!important;max-height:27px!important;flex-basis:27px!important}
+    .site-header .brand-text strong{font-size:15.5px!important}
+    .hero h1{font-size:30px}
+    .hero p{font-size:13.5px}
+    .hero-card{min-height:215px}
+    .hero-logo{width:64px!important;height:64px!important}
+    .section{padding:46px 0}
+    .section-title h2{font-size:23px}
+}
