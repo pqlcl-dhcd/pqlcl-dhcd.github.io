@@ -1329,3 +1329,48 @@ footer p{
         font-size:25px;
     }
 }
+/* ===== THU NHO LOGO HEADER ===== */
+
+.site-header .brand{
+    gap:10px;
+}
+
+.site-header .brand-logo{
+    width:30px !important;
+    height:30px !important;
+    max-width:30px !important;
+    max-height:30px !important;
+    flex:0 0 30px !important;
+}
+
+.site-header .brand strong{
+    font-size:23px;
+}
+
+.site-header .brand small{
+    font-size:12px;
+    margin-top:3px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .site-header .brand-logo{
+        width:28px !important;
+        height:28px !important;
+        max-width:28px !important;
+        max-height:28px !important;
+        flex-basis:28px !important;
+    }
+
+    .site-header .brand strong{
+        font-size:18px;
+    }
+
+    .site-header .brand small{
+        font-size:10px;
+    }
+
+}
