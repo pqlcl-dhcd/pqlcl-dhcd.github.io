@@ -1,912 +1,894 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title>Phòng Quản lý chất lượng - Trường Đại học Công đoàn</title>
+<title>Phòng Quản lý chất lượng - Trường Đại học Công đoàn</title>
 
-  <meta name="description"
-        content="Cổng thông tin Phòng Quản lý chất lượng - Trường Đại học Công đoàn">
-
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN</span>
+        <span>Phòng Quản lý chất lượng</span>
+    </div>
+</div>
+
+
+<!-- HEADER -->
 <header class="site-header">
 
-  <!-- Thanh thông tin trên cùng -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div>TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN</div>
-      <div>PHÒNG QUẢN LÝ CHẤT LƯỢNG</div>
-    </div>
-  </div>
-
-
-  <!-- Logo + tên đơn vị -->
-  <div class="header-main">
     <div class="container header-inner">
 
-      <a href="index.html" class="brand">
+        <a class="brand" href="index.html">
 
-        <img
-          src="assets/logo-truong-dai-hoc-cong-doan.webp"
-          alt="Logo Trường Đại học Công đoàn"
-        >
+            <img
+                class="brand-logo"
+                src="assets/logo-truong-dai-hoc-cong-doan.webp"
+                alt="Logo Trường Đại học Công đoàn"
+            >
 
-        <div class="brand-text">
+            <div class="brand-text">
+                <strong>PHÒNG QUẢN LÝ CHẤT LƯỢNG</strong>
+                <small>TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN</small>
+            </div>
 
-          <div class="brand-school">
-            TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN
-          </div>
+        </a>
 
-          <div class="brand-office">
-            PHÒNG QUẢN LÝ CHẤT LƯỢNG
-          </div>
+        <div class="header-tools">
 
-          <div class="brand-subtitle">
-            Cổng thông tin điện tử
-          </div>
+            <a href="https://dhcd.edu.vn">
+                Cổng thông tin Trường
+            </a>
+
+            <button id="searchBtn" aria-label="Tìm kiếm">
+                ⌕
+            </button>
 
         </div>
-
-      </a>
-
-
-      <div class="header-right">
-        <div class="header-caption">
-          QUẢN LÝ • ĐẢM BẢO CHẤT LƯỢNG • KHẢO THÍ
-        </div>
-
-        <div class="header-description">
-          Tra cứu thông tin trực tuyến
-        </div>
-      </div>
-
-
-      <!-- Mobile -->
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Mở menu"
-      >
-        ☰
-      </button>
 
     </div>
-  </div>
-
-
-  <!-- =======================================================
-       MENU
-  ======================================================== -->
-  <nav class="main-nav">
-
-    <div class="container nav-inner">
-
-      <a href="index.html" class="active">
-        Trang chủ
-      </a>
-
-      <a href="#news">
-        Tin tức
-      </a>
-
-      <a href="#notice">
-        Thông báo
-      </a>
-
-      <a href="van-ban.html">
-        Văn bản
-      </a>
-
-      <a href="#quality">
-        Đảm bảo chất lượng
-      </a>
-
-      <a href="#assessment">
-        Kiểm định chất lượng
-      </a>
-
-      <a href="#public">
-        Công khai
-      </a>
-
-      <a href="#contact">
-        Liên hệ
-      </a>
-
-    </div>
-
-  </nav>
 
 </header>
 
 
+<!-- MENU -->
+<nav class="main-nav">
 
-<!-- =========================================================
-     MAIN
-========================================================= -->
-<main>
+    <div class="container nav-inner">
+
+        <a class="active" href="index.html">
+            TRANG CHỦ
+        </a>
 
 
-  <!-- =======================================================
-       BANNER
-  ======================================================== -->
-  <section class="hero">
+        <div class="dropdown">
 
-    <div class="hero-overlay"></div>
+            <a>
+                GIỚI THIỆU ▾
+            </a>
+
+            <div class="dropdown-menu">
+
+                <a href="#gioi-thieu">
+                    Giới thiệu chung
+                </a>
+
+                <a href="#gioi-thieu">
+                    Chức năng, nhiệm vụ
+                </a>
+
+                <a href="#gioi-thieu">
+                    Cơ cấu tổ chức
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+            <a>
+                ĐẢM BẢO CHẤT LƯỢNG ▾
+            </a>
+
+            <div class="dropdown-menu">
+
+                <a href="#dbcl">
+                    Hệ thống ĐBCL bên trong
+                </a>
+
+                <a href="#dbcl">
+                    Chính sách chất lượng
+                </a>
+
+                <a href="#dbcl">
+                    Khảo sát
+                </a>
+
+                <a href="#dbcl">
+                    Cải tiến chất lượng
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+            <a>
+                KHẢO THÍ ▾
+            </a>
+
+            <div class="dropdown-menu">
+
+                <a href="#khaothi">
+                    Quy chế - Quy định
+                </a>
+
+                <a href="#khaothi">
+                    Tổ chức thi
+                </a>
+
+                <a href="#khaothi">
+                    Phúc khảo
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+            <a>
+                KIỂM ĐỊNH ▾
+            </a>
+
+            <div class="dropdown-menu">
+
+                <a href="#kiem-dinh">
+                    Kiểm định cơ sở giáo dục
+                </a>
+
+                <a href="#kiem-dinh">
+                    Kiểm định CTĐT
+                </a>
+
+                <a href="#kiem-dinh">
+                    Tự đánh giá
+                </a>
+
+                <a href="#kiem-dinh">
+                    Đánh giá ngoài
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="#xep-hang">
+            XẾP HẠNG
+        </a>
+
+
+        <div class="dropdown">
+
+            <a>
+                VĂN BẢN ▾
+            </a>
+
+            <div class="dropdown-menu">
+
+                <a href="van-ban.html">
+                    Văn bản pháp luật
+                </a>
+
+                <a href="van-ban.html">
+                    Quy định - Quy trình
+                </a>
+
+                <a href="van-ban.html">
+                    Biểu mẫu - Hướng dẫn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="#thong-bao">
+            THÔNG BÁO
+        </a>
+
+
+        <a href="#tin-tuc">
+            TIN TỨC
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
 
     <div class="container hero-inner">
 
-      <div class="hero-content">
+        <div>
 
-        <div class="hero-label">
-          PHÒNG QUẢN LÝ CHẤT LƯỢNG
-        </div>
+            <div class="crumb">
+                PHÒNG QUẢN LÝ CHẤT LƯỢNG
+            </div>
 
-        <h1>
-          Đồng hành cùng
-          <strong>chất lượng giáo dục</strong>
-        </h1>
+            <h1>
+                Đảm bảo chất lượng
+                <br>
+                <span>Đổi mới &amp; Cải tiến</span>
+            </h1>
 
-        <p>
-          Cung cấp thông tin về bảo đảm chất lượng, khảo thí,
-          tự đánh giá, kiểm định, minh chứng và các văn bản
-          quản lý chất lượng của Trường Đại học Công đoàn.
-        </p>
+            <p>
+                Đồng hành cùng Nhà trường xây dựng văn hóa chất lượng,
+                nâng cao trải nghiệm người học và phát triển bền vững.
+            </p>
 
-        <div class="hero-buttons">
-
-          <a
-            href="van-ban.html"
-            class="btn btn-primary"
-          >
-            Tra cứu văn bản
-          </a>
-
-          <a
-            href="#news"
-            class="btn btn-secondary"
-          >
-            Xem tin tức
-          </a>
+            <a class="hero-btn" href="#gioi-thieu">
+                Tìm hiểu về Phòng →
+            </a>
 
         </div>
 
-      </div>
 
+        <div class="hero-card">
 
-      <!-- Khung tìm kiếm -->
-      <div class="hero-search">
+            <img
+                class="hero-logo"
+                src="assets/logo-truong-dai-hoc-cong-doan.webp"
+                alt="Logo Trường Đại học Công đoàn"
+            >
 
-        <div class="search-heading">
-          TRA CỨU NHANH
+            <b>
+                QUẢN LÝ CHẤT LƯỢNG
+            </b>
+
+            <span>
+                Minh bạch · Khách quan · Cải tiến
+            </span>
+
         </div>
 
-        <p>
-          Tìm kiếm văn bản, thông báo và thông tin
-          trong cổng thông tin.
-        </p>
+    </div>
+
+</section>
+
+
+<main>
+
+
+<!-- QUICK LINKS -->
+<section class="quick container">
+
+    <a href="#dbcl">
+
+        <b>
+            ĐẢM BẢO CHẤT LƯỢNG
+        </b>
+
+        <span>
+            Hệ thống, khảo sát & cải tiến →
+        </span>
+
+    </a>
+
+
+    <a href="#khaothi">
+
+        <b>
+            KHẢO THÍ
+        </b>
+
+        <span>
+            Quy chế, tổ chức & đánh giá →
+        </span>
+
+    </a>
+
+
+    <a href="#kiem-dinh">
+
+        <b>
+            KIỂM ĐỊNH
+        </b>
+
+        <span>
+            Cơ sở GD & chương trình →
+        </span>
+
+    </a>
+
+
+    <a href="van-ban.html">
+
+        <b>
+            VĂN BẢN
+        </b>
+
+        <span>
+            Tra cứu văn bản, quy định →
+        </span>
+
+    </a>
+
+</section>
+
+
+<!-- TIN TỨC -->
+<section id="tin-tuc" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    TIN TỨC & HOẠT ĐỘNG
+                </span>
+
+                <h2>
+                    Tin mới nhất
+                </h2>
+
+            </div>
+
+            <a href="#">
+                Xem tất cả →
+            </a>
+
+        </div>
+
+
+        <div class="news-grid" id="newsList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- THÔNG BÁO -->
+<section id="thong-bao" class="section alt">
+
+    <div class="container two-col">
+
+        <div>
+
+            <div class="section-title compact">
+
+                <div>
+
+                    <span>
+                        THÔNG BÁO
+                    </span>
+
+                    <h2>
+                        Thông báo mới
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice-list"
+                id="noticeList">
+            </div>
+
+        </div>
+
+
+        <aside class="side-box">
+
+            <h3>
+                TRA CỨU NHANH
+            </h3>
+
+            <a href="van-ban.html">
+                ▤ Văn bản & quy định
+            </a>
+
+            <a href="#kiem-dinh">
+                ✓ Hồ sơ kiểm định
+            </a>
+
+            <a href="#dbcl">
+                ◉ Khảo sát các bên liên quan
+            </a>
+
+            <a href="#xep-hang">
+                ↗ Xếp hạng & đối sánh
+            </a>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- GIỚI THIỆU -->
+<section id="gioi-thieu" class="section">
+
+    <div class="container intro">
+
+        <div>
+
+            <span class="eyebrow">
+                VỀ CHÚNG TÔI
+            </span>
+
+            <h2>
+                Phòng Quản lý chất lượng
+            </h2>
+
+            <p>
+                Phòng Quản lý chất lượng là đơn vị tham mưu,
+                giúp Hiệu trưởng tổ chức và triển khai các hoạt động
+                đảm bảo, kiểm định và cải tiến chất lượng giáo dục;
+                đồng thời phối hợp thực hiện công tác khảo thí
+                theo quy định của Nhà trường.
+            </p>
+
+            <a class="text-link" href="#">
+                Xem chức năng, nhiệm vụ →
+            </a>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div>
+                <strong>01</strong>
+                <span>Hệ thống ĐBCL</span>
+            </div>
+
+            <div>
+                <strong>06+</strong>
+                <span>Lĩnh vực hoạt động</span>
+            </div>
+
+            <div>
+                <strong>126</strong>
+                <span>Minh chứng mẫu</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Hướng tới cải tiến</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ĐẢM BẢO CHẤT LƯỢNG -->
+<section id="dbcl" class="section alt">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    ĐẢM BẢO CHẤT LƯỢNG
+                </span>
+
+                <h2>
+                    Các lĩnh vực trọng tâm
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="cards">
+
+            <article>
+
+                <i>01</i>
+
+                <h3>
+                    Hệ thống ĐBCL bên trong
+                </h3>
+
+                <p>
+                    Chính sách, mục tiêu, quy trình
+                    và cơ chế vận hành.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <i>02</i>
+
+                <h3>
+                    Khảo sát & phản hồi
+                </h3>
+
+                <p>
+                    Thu thập ý kiến người học,
+                    giảng viên, nhà tuyển dụng
+                    và các bên liên quan.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <i>03</i>
+
+                <h3>
+                    Cải tiến chất lượng
+                </h3>
+
+                <p>
+                    Theo dõi kế hoạch cải tiến
+                    và kết quả thực hiện sau đánh giá.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <i>04</i>
+
+                <h3>
+                    Minh chứng
+                </h3>
+
+                <p>
+                    Thu thập, chuẩn hóa, quản lý
+                    và lưu trữ minh chứng.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KIỂM ĐỊNH -->
+<section id="kiem-dinh" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    KIỂM ĐỊNH CHẤT LƯỢNG GIÁO DỤC
+                </span>
+
+                <h2>
+                    Kiểm định & đánh giá
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="accredit">
+
+            <a>
+
+                <b>
+                    Cơ sở giáo dục
+                </b>
+
+                <span>
+                    Tự đánh giá · Đánh giá ngoài · Cải tiến
+                </span>
+
+            </a>
+
+
+            <a>
+
+                <b>
+                    Chương trình đào tạo
+                </b>
+
+                <span>
+                    MOET · AUN-QA · Các bộ tiêu chuẩn
+                </span>
+
+            </a>
+
+
+            <a>
+
+                <b>
+                    Tự đánh giá
+                </b>
+
+                <span>
+                    Báo cáo, kế hoạch và minh chứng
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- XẾP HẠNG -->
+<section id="xep-hang" class="section alt">
+
+    <div class="container ranking">
+
+        <div>
+
+            <span>
+                XẾP HẠNG & ĐỐI SÁNH
+            </span>
+
+            <h2>
+                Theo dõi chất lượng và vị thế Nhà trường
+            </h2>
+
+            <p>
+                Cập nhật thông tin xếp hạng, đối sánh
+                và các chỉ số chất lượng phục vụ quản trị.
+            </p>
+
+        </div>
+
+
+        <div class="rank-box">
+
+            <strong>
+                UPM
+            </strong>
+
+            <span>
+                Đối sánh chất lượng
+            </span>
+
+        </div>
+
+
+        <div class="rank-box">
+
+            <strong>
+                QS / THE
+            </strong>
+
+            <span>
+                Thông tin xếp hạng
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KHẢO THÍ -->
+<section id="khaothi" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    KHẢO THÍ
+                </span>
+
+                <h2>
+                    Công tác khảo thí
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="exam-grid">
+
+            <a>
+                Quy chế - Quy định
+                <b>→</b>
+            </a>
+
+            <a>
+                Tổ chức kiểm tra, đánh giá
+                <b>→</b>
+            </a>
+
+            <a>
+                Đánh giá chuẩn đầu ra
+                <b>→</b>
+            </a>
+
+            <a>
+                Phúc khảo & giải quyết kiến nghị
+                <b>→</b>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TÌM KIẾM -->
+<section class="section search-area">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    TRA CỨU
+                </span>
+
+                <h2>
+                    Tìm kiếm trên website
+                </h2>
+
+            </div>
+
+        </div>
+
 
         <div class="search-box">
 
-          <input
-            id="searchInput"
-            type="search"
-            placeholder="Tìm văn bản, thông báo, minh chứng..."
-          >
+            <input
+                id="searchInput"
+                placeholder="Nhập từ khóa: kiểm định, văn bản, khảo sát..."
+            >
 
-          <button
-            id="searchBtn"
-            type="button"
-          >
-            Tìm kiếm
-          </button>
+            <button id="doSearch">
+                Tìm kiếm
+            </button>
 
         </div>
 
 
-        <div class="quick-search">
-
-          <button data-filter="văn bản">
-            Văn bản
-          </button>
-
-          <button data-filter="kiểm định">
-            Kiểm định
-          </button>
-
-          <button data-filter="minh chứng">
-            Minh chứng
-          </button>
-
-          <button data-filter="công khai">
-            Công khai
-          </button>
-
-        </div>
-
-      </div>
+        <div id="searchResults"></div>
 
     </div>
 
-  </section>
+</section>
 
-
-
-  <!-- =======================================================
-       THỐNG KÊ
-  ======================================================== -->
-  <section class="stats">
-
-    <div class="container stats-grid">
-
-      <div class="stat-item">
-
-        <strong id="statDocs">
-          0
-        </strong>
-
-        <span>
-          Văn bản
-        </span>
-
-      </div>
-
-
-      <div class="stat-item">
-
-        <strong id="statNews">
-          0
-        </strong>
-
-        <span>
-          Tin tức & thông báo
-        </span>
-
-      </div>
-
-
-      <div class="stat-item">
-
-        <strong id="statEvidence">
-          0
-        </strong>
-
-        <span>
-          Minh chứng
-        </span>
-
-      </div>
-
-
-      <div class="stat-item">
-
-        <strong>
-          24/7
-        </strong>
-
-        <span>
-          Tra cứu trực tuyến
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       TIN TỨC
-  ======================================================== -->
-  <section
-    class="section"
-    id="news"
-  >
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-
-          <div class="section-label">
-            CẬP NHẬT
-          </div>
-
-          <h2>
-            Tin tức - Sự kiện
-          </h2>
-
-        </div>
-
-
-        <a
-          href="thong-bao.html"
-          class="view-all"
-        >
-          Xem tất cả →
-        </a>
-
-      </div>
-
-
-      <!-- JS hiện tại sẽ đổ dữ liệu vào đây -->
-      <div
-        id="newsList"
-        class="news-grid"
-      ></div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       THÔNG BÁO
-  ======================================================== -->
-  <section
-    class="section section-gray"
-    id="notice"
-  >
-
-    <div class="container notice-layout">
-
-      <div class="notice-intro">
-
-        <div class="section-label">
-          THÔNG TIN
-        </div>
-
-        <h2>
-          Thông báo mới
-        </h2>
-
-        <p>
-          Các thông tin và nội dung cần lưu ý
-          từ Phòng Quản lý chất lượng.
-        </p>
-
-        <a
-          href="thong-bao.html"
-          class="text-link"
-        >
-          Xem toàn bộ thông báo →
-        </a>
-
-      </div>
-
-
-      <div
-        id="noticeList"
-        class="notice-list"
-      >
-
-        <div class="notice-placeholder">
-          Đang cập nhật...
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       VĂN BẢN
-  ======================================================== -->
-  <section
-    class="section"
-    id="documents"
-  >
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-
-          <div class="section-label">
-            TRA CỨU
-          </div>
-
-          <h2>
-            Văn bản & Quy định
-          </h2>
-
-        </div>
-
-
-        <a
-          href="van-ban.html"
-          class="view-all"
-        >
-          Kho văn bản →
-        </a>
-
-      </div>
-
-
-      <div class="document-table-wrapper">
-
-        <table class="document-table">
-
-          <thead>
-
-            <tr>
-
-              <th>
-                Số / Ký hiệu
-              </th>
-
-              <th>
-                Ngày
-              </th>
-
-              <th>
-                Tên văn bản
-              </th>
-
-              <th>
-                Loại
-              </th>
-
-              <th>
-                Xem
-              </th>
-
-            </tr>
-
-          </thead>
-
-
-          <!-- JS hiện tại đổ dữ liệu vào đây -->
-          <tbody id="documentsList"></tbody>
-
-        </table>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       ĐẢM BẢO CHẤT LƯỢNG
-  ======================================================== -->
-  <section
-    class="section section-gray"
-    id="quality"
-  >
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-
-          <div class="section-label">
-            NGHIỆP VỤ
-          </div>
-
-          <h2>
-            Đảm bảo chất lượng
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <div class="service-grid">
-
-
-        <a
-          href="#"
-          class="service-card"
-        >
-
-          <div class="service-number">
-            01
-          </div>
-
-          <h3>
-            Hệ thống ĐBCL
-          </h3>
-
-          <p>
-            Chính sách, cơ cấu tổ chức, quy trình
-            và hoạt động bảo đảm chất lượng.
-          </p>
-
-        </a>
-
-
-        <a
-          href="#"
-          class="service-card"
-        >
-
-          <div class="service-number">
-            02
-          </div>
-
-          <h3>
-            Khảo sát
-          </h3>
-
-          <p>
-            Khảo sát, tổng hợp phản hồi và sử dụng
-            kết quả để cải tiến chất lượng.
-          </p>
-
-        </a>
-
-
-        <a
-          href="#"
-          class="service-card"
-        >
-
-          <div class="service-number">
-            03
-          </div>
-
-          <h3>
-            Chương trình đào tạo
-          </h3>
-
-          <p>
-            Rà soát, đánh giá, phát triển và
-            cải tiến chương trình đào tạo.
-          </p>
-
-        </a>
-
-
-        <a
-          href="#"
-          class="service-card"
-        >
-
-          <div class="service-number">
-            04
-          </div>
-
-          <h3>
-            Dữ liệu chất lượng
-          </h3>
-
-          <p>
-            Thông tin, chỉ số và báo cáo phục vụ
-            quản trị chất lượng.
-          </p>
-
-        </a>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       KIỂM ĐỊNH
-  ======================================================== -->
-  <section
-    class="section"
-    id="assessment"
-  >
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-
-          <div class="section-label">
-            KIỂM ĐỊNH
-          </div>
-
-          <h2>
-            Tự đánh giá & Kiểm định chất lượng
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <div class="process-grid">
-
-
-        <div class="process-card">
-
-          <div class="process-number">
-            01
-          </div>
-
-          <h3>
-            Tự đánh giá
-          </h3>
-
-          <p>
-            Thu thập dữ liệu, phân tích thực trạng
-            và xác định điểm mạnh, điểm cần cải tiến.
-          </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-          <div class="process-number">
-            02
-          </div>
-
-          <h3>
-            Minh chứng
-          </h3>
-
-          <p>
-            Quản lý, chuẩn hóa và tra cứu hệ thống
-            minh chứng theo tiêu chuẩn.
-          </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-          <div class="process-number">
-            03
-          </div>
-
-          <h3>
-            Đánh giá ngoài
-          </h3>
-
-          <p>
-            Chuẩn bị hồ sơ, phối hợp đánh giá ngoài
-            và tiếp nhận khuyến nghị.
-          </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-          <div class="process-number">
-            04
-          </div>
-
-          <h3>
-            Cải tiến
-          </h3>
-
-          <p>
-            Theo dõi kế hoạch cải tiến và mức độ
-            hoàn thành sau đánh giá.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       CÔNG KHAI
-  ======================================================== -->
-  <section
-    class="section section-gray"
-    id="public"
-  >
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-
-          <div class="section-label">
-            MINH BẠCH THÔNG TIN
-          </div>
-
-          <h2>
-            Công khai
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <div class="public-grid">
-
-
-        <a href="#">
-          <span>
-            Công khai hoạt động đào tạo
-          </span>
-          <span>→</span>
-        </a>
-
-
-        <a href="#">
-          <span>
-            Công khai đội ngũ
-          </span>
-          <span>→</span>
-        </a>
-
-
-        <a href="#">
-          <span>
-            Công khai cơ sở vật chất
-          </span>
-          <span>→</span>
-        </a>
-
-
-        <a href="#">
-          <span>
-            Công khai tài chính
-          </span>
-          <span>→</span>
-        </a>
-
-
-        <a href="#">
-          <span>
-            Công khai chất lượng giáo dục
-          </span>
-          <span>→</span>
-        </a>
-
-
-        <a href="#">
-          <span>
-            Các báo cáo liên quan
-          </span>
-          <span>→</span>
-        </a>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       KẾT QUẢ TÌM KIẾM
-  ======================================================== -->
-  <section
-    class="section search-results"
-    id="results"
-  >
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-
-          <div class="section-label">
-            TRA CỨU
-          </div>
-
-          <h2>
-            Kết quả tìm kiếm
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <div
-        id="resultsList"
-        class="results-list"
-      ></div>
-
-    </div>
-
-  </section>
 
 </main>
 
 
+<!-- FOOTER -->
+<footer>
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-<footer id="contact">
+    <div class="container footer-grid">
 
-  <div class="container footer-grid">
+        <div>
+
+            <div class="brand footer-brand">
+
+                <img
+                    class="brand-logo"
+                    src="assets/logo-truong-dai-hoc-cong-doan.webp"
+                    alt="Logo Trường Đại học Công đoàn"
+                >
+
+                <div class="brand-text">
+
+                    <strong>
+                        PHÒNG QUẢN LÝ CHẤT LƯỢNG
+                    </strong>
+
+                    <small>
+                        TRƯỜNG ĐẠI HỌC CÔNG ĐOÀN
+                    </small>
+
+                </div>
+
+            </div>
+
+            <p>
+                Đồng hành cùng chất lượng và sự phát triển
+                bền vững của Nhà trường.
+            </p>
+
+        </div>
 
 
-    <div class="footer-column">
+        <div>
 
-      <div class="footer-title">
-        PHÒNG QUẢN LÝ CHẤT LƯỢNG
-      </div>
+            <h4>
+                LIÊN HỆ
+            </h4>
 
-      <p>
-        Trường Đại học Công đoàn
-      </p>
+            <p>
+                169 Tây Sơn, Đống Đa, Hà Nội
+            </p>
+
+            <p>
+                qlcl@dhcd.edu.vn
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                LIÊN KẾT
+            </h4>
+
+            <a href="https://dhcd.edu.vn">
+                Cổng thông tin Trường
+            </a>
+
+            <a href="van-ban.html">
+                Kho văn bản
+            </a>
+
+            <a href="#">
+                Sơ đồ website
+            </a>
+
+        </div>
 
     </div>
 
 
-    <div class="footer-column">
+    <div class="copyright">
 
-      <div class="footer-heading">
-        LIÊN HỆ
-      </div>
+        <div class="container">
 
-      <p>
-        169 Tây Sơn, Đống Đa, Hà Nội
-      </p>
+            © 2026 Phòng Quản lý chất lượng –
+            Trường Đại học Công đoàn
 
-      <p>
-        Email: qlcl@dhcd.edu.vn
-      </p>
+        </div>
 
     </div>
-
-
-    <div class="footer-column">
-
-      <div class="footer-heading">
-        THÔNG TIN
-      </div>
-
-      <p>
-        Cổng thông tin Phòng Quản lý chất lượng
-      </p>
-
-      <p>
-        © 2026 Trường Đại học Công đoàn
-      </p>
-
-    </div>
-
-
-  </div>
 
 </footer>
 
 
-
-<!-- =========================================================
-     JAVASCRIPT
-     Giữ nguyên file script.js hiện tại
-========================================================= -->
 <script src="script.js"></script>
 
 </body>
