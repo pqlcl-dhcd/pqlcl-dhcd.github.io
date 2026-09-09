@@ -1,0 +1,317 @@
+from pathlib import Path
+from html import escape
+
+BASE = Path("documents")
+
+DESCS = {
+    # I
+    "1. QĐ Phê duyệt Khung trình độ quốc gia Việt Nam.pdf":
+        "Quyết định phê duyệt Khung trình độ quốc gia Việt Nam, quy định cấu trúc 8 bậc trình độ cùng yêu cầu về kiến thức, kỹ năng và mức độ tự chủ, trách nhiệm; làm cơ sở tham chiếu trong phát triển và công nhận trình độ đào tạo.",
+    "2. Luật giáo dục đại học.pdf":
+        "Quy định những vấn đề cơ bản về tổ chức, hoạt động và quản lý giáo dục đại học; quyền và trách nhiệm của cơ sở giáo dục đại học, tự chủ đại học, đào tạo, nghiên cứu khoa học và bảo đảm chất lượng.",
+    "3. QĐ Phê duyệt Chương trình Phát triển hệ thống BĐ & kiểm định CLGD đối với GDĐH và CĐSP gđ 2022-2030 .pdf":
+        "Phê duyệt Chương trình phát triển hệ thống bảo đảm và kiểm định chất lượng giáo dục đối với giáo dục đại học và cao đẳng sư phạm giai đoạn 2022–2030, tập trung phát triển hệ thống bảo đảm chất lượng bên trong và nâng cao năng lực kiểm định.",
+    "4. TT Quy định về kiểm định chất lượng cơ sở GDĐH.pdf":
+        "Quy định về kiểm định chất lượng cơ sở giáo dục đại học, gồm mục đích, nguyên tắc, tiêu chuẩn và quy trình kiểm định; tập trung vào quản trị, chiến lược, đội ngũ, người học, cơ sở vật chất, tài chính và hoạt động bảo đảm chất lượng.",
+    "5. TT Ban hành Chuẩn cơ sở GDĐH.pdf":
+        "Ban hành Chuẩn cơ sở giáo dục đại học, quy định các yêu cầu và tiêu chuẩn liên quan đến tổ chức quản trị, đội ngũ, cơ sở vật chất, tài chính và các điều kiện bảo đảm chất lượng của cơ sở giáo dục đại học.",
+    "Thông tư ban hành quy chế tuyển sinh và đào tạo SDH.pdf":
+        "Quy định về tuyển sinh và đào tạo trình độ sau đại học, bao gồm các yêu cầu về tổ chức đào tạo, quản lý người học và các điều kiện bảo đảm chất lượng trong đào tạo sau đại học.",
+    "Thông tư hướng dẫn về quy chế tổ chức và hoạt động của cơ sở giáo dục đại học.pdf":
+        "Hướng dẫn về tổ chức và hoạt động của cơ sở giáo dục đại học, làm rõ cơ cấu tổ chức, trách nhiệm quản lý và các nguyên tắc vận hành của nhà trường.",
+    "Thông tư quy định ứng dụng công nghệ trong giáo dục đại học, giáo dục nghề nghiệp.pdf":
+        "Quy định việc ứng dụng công nghệ trong giáo dục đại học và giáo dục nghề nghiệp, hỗ trợ đổi mới phương thức quản lý, tổ chức đào tạo và nâng cao hiệu quả hoạt động giáo dục.",
+
+    # II
+    "6. TT Quy định về công khai trong HĐ cơ sở GD thuộc hệ thống GDQD.pdf":
+        "Quy định về công khai trong hoạt động của cơ sở giáo dục thuộc hệ thống giáo dục quốc dân, gồm nguyên tắc, nội dung và trách nhiệm công khai về tổ chức, đội ngũ, đào tạo, điều kiện bảo đảm chất lượng và tài chính.",
+    "7. Thông tư Ban hành Chuẩn cơ sở GDĐH.docx":
+        "Văn bản ban hành Chuẩn cơ sở giáo dục đại học, làm căn cứ đánh giá các điều kiện hoạt động và bảo đảm chất lượng của cơ sở giáo dục đại học.",
+    "TT Quy định về công khai trong HĐ cơ sở GD thuộc hệ thống GDQD.pdf":
+        "Quy định về công khai trong hoạt động của cơ sở giáo dục thuộc hệ thống giáo dục quốc dân, góp phần bảo đảm minh bạch thông tin và trách nhiệm giải trình của cơ sở giáo dục.",
+
+    # III
+    "8. TT Quy định về kiểm định chất lượng chương trình ĐT các trình độ của GDĐH.pdf":
+        "Quy định về kiểm định chất lượng chương trình đào tạo các trình độ của giáo dục đại học, bao gồm tiêu chuẩn, quy trình đánh giá và các yêu cầu đối với hoạt động kiểm định chương trình đào tạo.",
+    "9. TT Quy định về chuẩn CTĐT; XD, thẩm định và ban hành CTĐT các trình độ của GDĐH.pdf":
+        "Quy định về chuẩn chương trình đào tạo và quy trình xây dựng, thẩm định, ban hành chương trình đào tạo các trình độ của giáo dục đại học; chú trọng mục tiêu, chuẩn đầu ra, cấu trúc và nội dung chương trình.",
+    "Thông tư quy định quy trình biên soạn, ban hành chương trình giáo trình học và các môn học, hp bắt buộc sử dụng trong CTĐt của GDĐH.pdf":
+        "Quy định quy trình biên soạn, ban hành chương trình, giáo trình, học liệu và các môn học, học phần bắt buộc sử dụng trong chương trình đào tạo giáo dục đại học.",
+
+    # IV
+    "11. QĐ vv thành lập Hội đồng BĐCL Trường ĐHCĐ.pdf":
+        "Quyết định thành lập Hội đồng Bảo đảm chất lượng của Trường Đại học Công đoàn, xác lập đầu mối tham gia chỉ đạo và tổ chức các hoạt động bảo đảm chất lượng trong toàn trường.",
+    "12. QĐ vv thành lập Mạng lưới BĐCL bên trong Trường ĐHCĐ.pdf":
+        "Quyết định thành lập Mạng lưới bảo đảm chất lượng bên trong Trường Đại học Công đoàn, hình thành lực lượng phối hợp triển khai, theo dõi và cải tiến hoạt động bảo đảm chất lượng tại các đơn vị.",
+    "13. QĐ vv ban hành Chuẩn đầu ra chương trình ĐT trình độ ĐH các ngành của Trường ĐHCĐ.pdf":
+        "Ban hành chuẩn đầu ra chương trình đào tạo trình độ đại học các ngành của Trường Đại học Công đoàn, xác định yêu cầu về kiến thức, kỹ năng, mức độ tự chủ và trách nhiệm của người học sau khi tốt nghiệp.",
+    "14. QĐ vv ban hành Chiến lực ĐBCL giáo dục gđ 2022-2025, tầm nhìn đến năm 2030, 2045 của Trường ĐHCĐ.pdf":
+        "Ban hành Chiến lược bảo đảm chất lượng giáo dục giai đoạn 2022–2025, tầm nhìn đến năm 2030 và 2045 của Trường Đại học Công đoàn, định hướng hệ thống và các nhiệm vụ trọng tâm về bảo đảm chất lượng.",
+    "15. QĐ vv ban hành Chính sách ĐBCL giáo dục của Trường ĐHCĐ.pdf":
+        "Ban hành Chính sách bảo đảm chất lượng giáo dục của Trường Đại học Công đoàn, thể hiện các nguyên tắc và cam kết của Nhà trường đối với chất lượng đào tạo, cải tiến liên tục và đáp ứng yêu cầu của các bên liên quan.",
+    "16. QĐ vv ban hành Quy chế TC và vận hành HT ĐBCL bên trong của Trường ĐHCĐ.pdf":
+        "Quy định tổ chức và vận hành hệ thống bảo đảm chất lượng bên trong của Trường Đại học Công đoàn, xác định cơ cấu, trách nhiệm, cơ chế phối hợp, giám sát, đánh giá và cải tiến chất lượng.",
+    "17. QĐ vv ban hành Quy định các hoạt động KS của trường ĐHCĐ_0001.pdf":
+        "Quy định về hoạt động khảo sát của Trường Đại học Công đoàn, gồm mục đích, đối tượng, nội dung, quy trình thực hiện và việc sử dụng kết quả khảo sát để phục vụ đánh giá và cải tiến chất lượng.",
+    "18. QĐ vv ban hành Quy chế BĐCL GDĐH của Trường ĐHCĐ.pdf":
+        "Quy chế bảo đảm chất lượng giáo dục đại học của Trường Đại học Công đoàn, quy định các nguyên tắc, nội dung, trách nhiệm và cơ chế triển khai, đánh giá và cải tiến hoạt động bảo đảm chất lượng.",
+    "19. QĐ ban hành Quy định Chuẩn CTĐT; XD, thẩm định và ĐG, cải tiến chất lượng CTĐT các trình độ Trường ĐHCĐ.pdf":
+        "Quy định chuẩn chương trình đào tạo và quy trình xây dựng, thẩm định, đánh giá, cải tiến chất lượng chương trình đào tạo các trình độ tại Trường Đại học Công đoàn.",
+    "20. Quy định TC đánh giá CĐR NN, Tin học trình độ ĐH, hệ chính quy của Trường ĐHCĐ.pdf":
+        "Quy định tổ chức đánh giá chuẩn đầu ra ngoại ngữ và tin học trình độ đại học hệ chính quy của Trường Đại học Công đoàn, từ điều kiện, hình thức đến tổ chức và công nhận kết quả.",
+    "21. QĐ Ban hành Quy định về công khai trong hoạt động của Trường ĐHCĐ.pdf":
+        "Quy định về công khai trong hoạt động của Trường Đại học Công đoàn, xác định nội dung, trách nhiệm và phương thức thực hiện công khai nhằm tăng cường minh bạch và trách nhiệm giải trình.",
+
+    # V
+    "22. QĐ Ban hành Quy định TC thi kết thúc HP của Trường ĐHCĐ.pdf":
+        "Quy định tổ chức thi kết thúc học phần tại Trường Đại học Công đoàn, bao gồm lập kế hoạch, lịch thi, hình thức thi, điều kiện dự thi, tổ chức coi thi và các yêu cầu liên quan.",
+    "23. Quy định vv XD, QL và SD ngân hàng câu hỏi, bộ đề thi kết thúc HP của Trường ĐHCĐ.pdf":
+        "Quy định xây dựng, quản lý và sử dụng ngân hàng câu hỏi, bộ đề thi kết thúc học phần; quy định về nội dung, số lượng, mức độ nhận thức, thẩm định, bảo mật và sử dụng đề thi."
+}
+
+GROUPS = {
+    "I-van-ban-quy-dinh-chung.html": (
+        "I – Văn bản quy định chung",
+        "I-van-ban-quy-dinh-chung"
+    ),
+    "II-kiem-dinh-CSGDĐH.html": (
+        "II – Văn bản của Bộ GD&ĐT về kiểm định chất lượng CSGDĐH",
+        "II-kiem-dinh-CSGDĐH"
+    ),
+    "III-kiem-dinh-CTDT.html": (
+        "III – Văn bản của Bộ GD&ĐT về kiểm định chất lượng CTĐT",
+        "III-kiem-dinh-CTDT"
+    ),
+    "IV-noi-bo-dam-bao-chat-luong.html": (
+        "IV – Văn bản nội bộ của Trường về công tác đảm bảo chất lượng",
+        "IV-noi-bo-dam-bao-chat-luong"
+    ),
+    "V-noi-bo-khao-thi.html": (
+        "V – Văn bản nội bộ của Trường về công tác khảo thí",
+        "V-noi-bo-khao-thi"
+    )
+}
+
+STYLE = """
+.document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.document-item {
+    background: #fff;
+    border: 1px solid #e4e8ef;
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: all .2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.document-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0,0,0,.09);
+    border-color: #cfd7e3;
+}
+
+.document-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.document-name {
+    color: #17365d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.document-name:hover {
+    color: #0b63ce;
+}
+
+.document-excerpt {
+    margin: 8px 0 12px;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.document-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.document-type {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 5px;
+    background: #eef2f7;
+    color: #475467;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.document-view {
+    color: #1769aa;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.document-view:hover {
+    text-decoration: underline;
+}
+
+.empty-message {
+    padding: 25px;
+    text-align: center;
+    color: #667085;
+}
+"""
+
+def make_page(title, folder):
+    return f'''<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape(title)} | Phòng Quản lý chất lượng</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>{STYLE}</style>
+</head>
+
+<body>
+
+<main class="page-container">
+    <a href="../van-ban.html" class="back-link">
+        ← Quay lại Kho văn bản
+    </a>
+
+    <section class="document-section">
+        <h1>{escape(title)}</h1>
+
+        <div id="documentList" class="document-list">
+            <div class="empty-message">Đang tải danh sách văn bản...</div>
+        </div>
+    </section>
+</main>
+
+<script>
+const descriptions = {{}};
+
+async function loadDocuments() {{
+    const list = document.getElementById("documentList");
+
+    try {{
+        const response = await fetch(
+            "https://api.github.com/repos/pqlcl-dhcd/pqlcl-dhcd.github.io/contents/documents/{folder}"
+        );
+
+        if (!response.ok) {{
+            throw new Error("Không thể tải danh sách văn bản");
+        }}
+
+        const files = await response.json();
+
+        const docs = files
+            .filter(file => /\\.(pdf|docx)$/i.test(file.name))
+            .sort((a, b) =>
+                a.name.localeCompare(b.name, "vi", {{
+                    numeric: true,
+                    sensitivity: "base"
+                }})
+            );
+
+        if (!docs.length) {{
+            list.innerHTML = '<div class="empty-message">Chưa có văn bản trong thư mục này.</div>';
+            return;
+        }}
+
+        list.innerHTML = "";
+
+        docs.forEach(file => {{
+            const item = document.createElement("article");
+            item.className = "document-item";
+
+            const top = document.createElement("div");
+            top.className = "document-top";
+
+            const name = document.createElement("a");
+            name.className = "document-name";
+            name.href = file.download_url;
+            name.target = "_blank";
+            name.rel = "noopener";
+            name.textContent = file.name;
+
+            const type = document.createElement("span");
+            type.className = "document-type";
+            type.textContent = file.name.toLowerCase().endsWith(".pdf")
+                ? "PDF"
+                : "DOCX";
+
+            top.appendChild(name);
+            top.appendChild(type);
+
+            const excerpt = document.createElement("p");
+            excerpt.className = "document-excerpt";
+            excerpt.textContent =
+                descriptions[file.name] ||
+                "Văn bản được lưu trữ trong Kho văn bản của Phòng Quản lý chất lượng.";
+
+            const meta = document.createElement("div");
+            meta.className = "document-meta";
+
+            const view = document.createElement("a");
+            view.className = "document-view";
+            view.href = file.download_url;
+            view.target = "_blank";
+            view.rel = "noopener";
+            view.textContent = "Xem văn bản →";
+
+            meta.appendChild(view);
+
+            item.appendChild(top);
+            item.appendChild(excerpt);
+            item.appendChild(meta);
+
+            list.appendChild(item);
+        }});
+
+    }} catch (error) {{
+        list.innerHTML =
+            '<div class="empty-message">Không thể tải danh sách văn bản. Vui lòng thử lại sau.</div>';
+        console.error(error);
+    }}
+}}
+
+loadDocuments();
+</script>
+
+</body>
+</html>
+'''
+
+# Chèn descriptions đúng từng trang
+for filename, (title, folder) in GROUPS.items():
+    page = make_page(title, folder)
+
+    # Chuyển dict Python sang object JS an toàn
+    js_map = "{\n" + ",\n".join(
+        f"    {escape(k).__repr__()}: {escape(v).__repr__()}"
+        for k, v in DESCS.items()
+    ) + "\n}"
+
+    page = page.replace("const descriptions = {};", "const descriptions = " + js_map + ";")
+
+    path = BASE / filename
+    path.write_text(page, encoding="utf-8")
+    print("Đã cập nhật:", path)
+
+print("\nHOÀN TẤT: đã cập nhật 5 trang I–V.")
+print("Không xóa bất kỳ file văn bản nào.")
