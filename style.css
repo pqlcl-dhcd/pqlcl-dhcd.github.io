@@ -987,3 +987,7 @@ footer {
         display: block;
     }
 }
+/* ẨN LOGO Ở GIỮA TRANG */
+.hero-card .hero-logo {
+    display: none;
+}
